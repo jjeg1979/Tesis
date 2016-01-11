@@ -1,0 +1,48 @@
+\chapter{MÉTODOS DE ANÁLISIS FRACTAL}\label{cap:MetodosAnalisisFractal}
+\startcontents[chapters]
+\printcontents[chapters]{}{1}{}
+\newpage
+\section{Morfología de los Aglomerados}
+\subsection{Geometría fractal}
+\section{Conceptos básicos}\label{sec:ConceptosBasicos}
+\par Las partículas emitidas en procesos de combustión, bien sean en llamas en hornos, quemadores o en motores diésel, forman conjuntos de partículas llamados \index{aglomerados} \emph{aglomerados}. Cada partícula constituyente de dicho aglomerado se denomina \index{partícula primaria} \emph{partícula primaria}. Asimismo, los aglomerados formados en las tecnologías que involucran suspensiones sólidas coloidales están formados a menudo por partículas primarias \index{monómeros}(\emph{monómeros}) con formas parecidas a \index{esférulas} \emph{esférulas}, cuyos diámetros son muy uniformes en tamaño. Algunos procesos de formación de partículas tienen como resultado final la obtención de productos diferentes a los de partida. Tal es el caso de la industria de los pigmentos. Mientras, otros procesos generan subproductos, siendo la formación de hollín en el conducto de escape de un motor Diésel un ejemplo de estos últimos. Aunque los procesos de formación puedan ser muy diferentes, la formación de partículas de SiO$_2$ y TiO$_2$ llevan a la formación de partículas cuya apariencia física es muy parecida. Estos son sólo dos ejemplos de una amplia variedad de entornos industriales cuyos procesos conllevan la formación de aglomerados con morfologías que no sólo son similares, sino que también sus propiedades son muy similares las unas de las otras, con independencia del material de entrada al proceso. Las propiedades resultantes dependen fuertemente de la disposición espacial y la morfología, la cual tiene un fuerte impacto en las propiedades finales de los aglomerados.
+
+\par El último es el caso de los aglomerados de hollín diesel, entre otros \cite{lapuertaetal:2007}. En los estudios de simulación, es común asumir un diámetro uniforme para las partículas primarias, \cite{wuetal:1993,tandonetal:1995,ohetal:1997,leeetal:2002,zhuetal:2003}, ya que se ha probado que la polidispersidad no afecta significativamente a los parámetros morfológicos que describen el aglomerado \cite{busheletal:1998}. Estas partículas primarias se disponen en el aglomerado formando racimos irregulares con tamaños, formas y masas diferentes los unos de los otros. Pueden considerarse como estructuras cuasifractales y se acepta que, en el caso de estar compuestos por un número suficiente de partículas primarias pueden describirse mediante la \emph{Ley de Potencias}, siendo la \textbf{dimensión fractal} y el \textbf{prefactor} como los parámetros característicos \cite{bonczyketal:1991}. Los tamaños tan dispersos de los aglomerados, junto con los bien conocidos efectos medioambientales y sobre la salud que tiene la morfología de los aglomerados (no sólo con respecto al tamaño sino también con respecto a la forma) \cite{kittlelson:1998,meakinetal:1989} hacen necesaria una descripción cuantitativa adecuada de los aglomerados de hollín.
+
+\par La forma más común de cuantificar esta irregularidad es usando la dimensión fractal, adoptada de \cite{mandelbrot:1983} partiendo de la propuesta previa de Félix Hausdorff. La aplicación de una dimensión fractal a los aglomerados de hollín diesel supone asumir que estos aglomerados se corresponden con geometrías fractales. Aunque los aglomerados de hollín se pueden clasificar como racimos granulosos o granulares siguiendo la concepción original de Mandelbrot, se consideran usualmente estructuras cuasifractales, ya que no pueden ser ciertamente ser autosimilares (o autoescalares como las denominó Mandelbrot) a menos que estén compuestas de un número muy grande de partículas primarias.
+
+\par En la literatura se han propuesto diferentes métodos experimentales para determinar la dimensión fractal de aglomerados de hollín a partir de sus imágenes planas obtenidas mediante \textit{Microscopio de Transmisión Electrónica} (TEM por sus siglas en inglés). El más común se basa en ajuste lineal del diámetro de giro frente al número de partículas primarias, en un diagrama log-log \cite{leeetal:2002}
+
+\begin{equation}
+\ln(n_{p_o})\,=\,\ln(k_{f})+D_{f}\ln(\frac{d_{g}}{d_{p_o}})
+\label{eq:leydepotencias}
+\end{equation}
+
+\par Este método se deriva de la aplicación de la \index{Ley de Potencias}, la cual está considerada ampliamente como la ecuación característica que gobierna las estructuras fractales o cuasifractales \cite{samsometal:1987,caietal:1995,koyluetal:1995}, etc. La dimensión fractal \nomenclature{$D_{f}$}{Dimension Fractal} se obtiene entonces como la pendiente de la recta de regresión, mientras que el prefactor \nomenclature{$k_{f}$}{Prefactor de la Ley de Potencias} se identifica con el valor cuya abscisa es cero. Sin embargo, este método tiene cinco desventajas importantes:
+
+\begin{enumerate}
+\item Es incapaz de dar una dimensión fractal y un prefactor para los aglomerados de forma individual. En cambio, da un valor medio de ambos parámetros para una población grande de aglomerados. Una descripción individual de la morfología del aglomerado abría las posibilidades de una mejor discriminación de los efectos de las condiciones operativas del motor, tipo de combustible utilizado, condiciones térmicas en el conducto de escape, etc. sobre el tamaño, forma y efectos potenciales medioambientales de las emisiones de hollín. Pocos métodos geométricos se han propuesto para la determinación individual de la dimensión fractal de aglomerados de hollín hasta la fecha \cite{lattuadaetal:2003,lapuertaetal:2006,wozniaketal:2012}.
+\item El número de partículas primarias que componen el aglomerado es desconocido, y se estima normalmente a través de otra Ley de Potencias distinta que intenta reproducir el solape entre partículas primarias cuando el aglomerado se proyecta en un plano, \cite{medaliaetal:1969,megaridisetal:1990}, \cite{brasiletal:1999,leeetal:2003}. Sin embargo, el exponente para esta Ley de Potencias adicional, $z$, no se determina de forma unívoca, ya que de hecho depende de la forma y tamaño del aglomerado \cite{ohetal:1997}. El solape y el aplastamiento no deben confundirse: el primero es un efecto visual de las partículas ocultas tras otras partículas en la proyección plana, mientras que el último es un efecto morfológico debido a la colisión de partículas primarias que resulta en geometrías que están lejos de ser esféricas.
+
+\begin{equation}
+\ln(n_{p_o})\,=\,\ln(z)+\ln(\frac{A_{p}}{A_{p_o}})
+\label{eq:leydepotenciassolape}
+\end{equation}
+
+\item El diámetro de giro del aglomerado se identifica normalmente con el diámetro de giro de su proyección plana \cite{rogaketal:1992,koyluetal:1995,ohetal:1997}, a pesar de que se ha probado que subestima el diámetro de giro del aglomerado tridimensional. Este error lleva a que los métodos basados en proyecciones de imágenes planas subestimen la dimensión fractal de las estructuras tridimensionales \cite{rogaketal:1992,nelsonetal:1990,adachieetal:2007}.
+
+\item Se supone tamaño uniforme para las partículas primarias. Esta suposición podría parecer muy restrictiva. De hecho, se puede probar que se puede obtener una distribución de tamaños estadística en todos los procesos que involucran interacción de partículas \cite{busheletal:1998}. Sin embargo, el asumir tamaño uniforme para modelar la morfología de los aglomerados constituidos por partículas primarias ha demostrado ser un enfoque correcto al problema.
+
+\item Las partículas primarias se asumen esféricas, sin tener en cuenta los efectos de aplastamiento, que podrían afectar al prefactor y a la dimensión fractal obtenidos \cite{ohetal:1997,brasiletal:1999,alzaitoneetal:2009}.
+\end{enumerate}
+
+\par La investigación doctoral que se desarrollará comienza desde la base del modelo propuesto por \cite{lapuertaetal:2006} e intenta resolver los inconvenientes 2 a 4 anteriormente mencionados. La primera parte de esta investigación se dedica al análisis fractal  basada no solamente en la forma de los aglomerados a partir de sus proyecciones planas, sino también a partir de su opacidad. La \emph{Ley de Beer-Lambert}, que proporciona la transmitancia lumínica de imágenes de sólidos en escala de grises, se uso como base para determinar el número de partículas primarias ocultas detrás de las visibles. A partir del número de partículas primarias de cada aglomerado individual, su masa, momento de inercia, diámetro de giro se determinaron su densidad aparente y su dimensión fractal sin hipótesis adicionales acerca del solape y sin extrapolación de patrones promedio. Esta metodología ha sido publicada en la revista \textit{Measurement Science and Technology} y se encuentra en el Apéndice \ref{app:BeerLambert} al final de esta tesis.
+
+\section{Descripción del modelo geométrico}
+\section{Algoritmo del modelo}
+\section{Hipótesis del modelo}
+
+
+\newpage
+\bibliographystyle{ealpha}	
+\bibliography{References/Tesis}

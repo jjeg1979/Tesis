@@ -1,0 +1,148 @@
+% ====================================================== STYLE DOCUMENT ========================================================================
+% This file contains all the neccesary package calls for the Thesis
+% ===============================================================================================================================================
+% inputenc for iso-8859-1 encoding
+% fontenc for the font encoding
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}		% Defines Mathpatho font
+\linespread{1.05}         	% Palatino needs more leading (space between lines)
+
+% \usepackage{natbib}
+% sectionbib allows for as per chapter bibliography. It must be added before babel package
+% sectionbib: For chapter bibliographies
+% duplicate: To have a bibliography-by-chapter at the end
+\usepackage[rootbib]{chapterbib}		% For the first Latex Compilation and BibTex Compilation for the master document
+%\usepackage{chapterbib}
+% \usepackage[sectionbib,duplicate]{chapterbib}
+% \CitationPrefix{\thechapter.}				% Applies the chapter number as a prefix for citations
+% This package also includes bibliography per chapter
+% globalcitecopy: 
+% sectionbib:
+%\usepackage[globalcitecopy,sectionbib]{bibunits}
+
+% Trial with biblatex to get good bibliography per chapter
+% \usepackage[style=alphabetic]{biblatex}
+% \addbibresource{References/Tesis.bib}
+
+% Bable defines the current languages used
+\usepackage[main=spanish,english]{babel}
+
+% cite package allows as to manipulate how cites are formed. This package is not compatible with biblatex
+\usepackage{cite}
+
+% Use aditional symbols (AMS)
+\usepackage{amsmath,amssymb,amsfonts,latexsym}
+
+% Packet geometry to design document
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm,footskip=1cm]{geometry}
+\parindent = 5mm		% Sangría
+
+% fixltx2e allows for the use of subscripts and superscripts inside the text
+\usepackage{fixltx2e}
+
+% enumitem package allows the changing of enumeration style (roman numbers...)
+\usepackage{enumitem}
+
+% Solve some issues with babel package in book
+\renewcommand{\contentsname}{Contenido}
+\renewcommand{\partname}{Parte}
+\renewcommand{\appendixname}{Apéndice}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\listtablename}{Índice de Tablas}
+\renewcommand\listfigurename{Índice de Figuras}
+\renewcommand{\chaptername}{Capítulo}
+\renewcommand{\bibname}{Referencias}
+\renewcommand\citeform[1]{(#1)}			% Changes reference format to [(1),(2),(3)]
+\usepackage[nottoc]{tocbibind}
+% backref package allows for backreferencing citations in the bibliography when used in per chapter bibliography
+% ref: section number for reference. This package is not compatible with biblatex
+\usepackage[ref]{backref}
+% Graphicx package for using graphics
+\usepackage{graphicx}
+% Multirow package allows for the creation of tables
+\usepackage{multirow}
+% Titleref provides a command \titleref to cross-reference the titles of sections
+\usepackage{titleref}
+% subfig package allows for sub-floats (figures, tables) to be separately captioned, referenced and included in a list-of-floats page
+\usepackage{subfig}
+% minitoc creates a mini-table of contents at the beginning of each section. In the main text you have to add \dominitoc
+%\usepackage{minitoc}
+% titletoc is the same as minitoc
+\usepackage{titletoc}
+% makeidx creates an index
+\usepackage{makeidx}
+% nomencl creates a nomenclature
+% intoc: Puts the nomenclature in the TOC
+% spanish: For Spanish Language
+\usepackage[intoc,spanish]{nomencl}
+% glossaries is more up to date than nomencl
+%\usepackage[xindy,nonumberlist,toc,nopostdot,style=altlist,nogroupskip]{glossaries}
+\renewcommand{\nomname}{Lista de Símbolos}
+
+
+% color: Package to use color
+% usenames, dvipsnames and svgnames give access to a lot of colors
+% table is for including color in tables
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+% Define maximum depth for minitoc
+%\setcounter{minitocdepth}{3} 
+% Rename Contents in minitoc
+%\renewcommand{\mtctitle}{Contenido del Capítulo}
+
+% hyperref is used for hyperlinks
+% colorlinks: To show links with color
+% linkcolor = color: Color of links
+% urlcolor = color: Color of url links
+% citecolor = color: Color of bibliographic references
+% linktoc = all: For numbers in TOC colored as well
+% backref = For backreferencing the citations in the global bibliography
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue,citecolor=blue,linktoc=all,backref=section]{hyperref}
+
+% The following commands allow the subsubsubsection to be numbered in the text and in the index
+\setcounter{secnumdepth}{4}		% For the text
+\setcounter{tocdepth}{4}		% For the index
+% This package allows the Reference to appear in the TOC without numbering
+\usepackage[nottoc]{tocbibind}
+
+% Rename Command in backref so the sections are in brackets
+\renewcommand*{\backref}[1]{[#1]}
+% Define Spanish words for backreferencing
+\def\backrefspanish{%
+	\def\backrefpagesname{páginas}%
+	\def\backrefsectionsname{secciones}%
+	\def\backrefsep{, }
+	\def\backreftwosep{ y~}%
+	\def\backreflastsep{ y~}%
+}
+
+% lettrine used capital letter
+\usepackage{lettrine}
+
+% Define the name of Tables
+\usepackage[format=plain,justification=centerlast,width=15cm,labelsep=period,tablename=Tabla,skip=5pt]{caption}
+
+% Define directories where to find figures
+\graphicspath{{Figuras/}{Chapter1/Chapter1Figs/}{Chapter2/Chapter2Figs/}{Chapter3/Chapter3Figs/}}
+
+% To customize headers and footers this package is a must. 
+\usepackage{fancyhdr}
+
+% lastpage package allows for the use of the lastpage
+\usepackage{lastpage}
+
+% appendix allows for more control over the appendixes format
+\usepackage{appendix}
+
+% -----------------------------------------------------------------------------------------------------------------------------------------------
+% CODE ZONE
+% -----------------------------------------------------------------------------------------------------------------------------------------------
+% This code forbids the inserted pages to have either header or footer
+%\makeatletter
+%  \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+%  \vspace*{\fill}
+%    \thispagestyle{empty}
+%    \newpage
+%    \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+%\makeatother

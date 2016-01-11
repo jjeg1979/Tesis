@@ -1,0 +1,45 @@
+% The following defines de document class plus some options:
+% 12pto: Size of the font
+% a4paper: Size of sheet
+% twoside: Printable in both sides
+% openright: Chapters open in right-hand page
+% titlepage: Causes the \maketitle command to make a separate title page and the abstract environment to put the abstract on a separate page. 
+% fleqn: Left-aligns displayed formulas
+\documentclass[11pt,a4paper,twoside,openright,titlepage,fleqn]{book}
+
+% Extra packages and options
+\input{Config/Thesis_Options.tex}
+
+% Begin of document
+\begin{document}
+	\begin{onehalfspace}
+		%
+		% The values of several variables like author, thesis title... are written in rename.tex
+		%
+		\input{Config/rename.tex}
+		
+		%
+		% Preliminar CONTENT: frontpage, certificate, acknowledgments, cites, prefaces...
+		%
+		\input{Cascara/Portada.tex}
+		
+		%
+		\input{Config/begin.tex}
+		
+%		\input{Cascara/Agradecimientos}
+		\input{Cascara/Pagina1.tex}
+		\input{Cascara/Pagina2.tex}	
+		\input{Cascara/ListaSimbolos.tex}	
+		\input{Cascara/TOC.tex}
+		
+		%
+		% CONFIG: Chapters style
+		%
+		\input{Config/chapters.tex}
+		
+		%
+		% CONTENT: All the chapters
+		\input{Chapters/01Introduccion.tex}
+		
+	\end{onehalfspace}
+\end{document}
