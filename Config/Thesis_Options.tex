@@ -44,7 +44,7 @@
 \usepackage[utf8]{inputenc} 
 
 % Standard package for selecting font encodings
-\usepackage[T1]{fontenc}
+\usepackage[T1,T2A]{fontenc}
 
 % Fonts to typeset mathematics to match Palatino
 \usepackage{mathpazo}		% Defines Mathpatho font
@@ -153,6 +153,9 @@
 \renewcommand{\topfraction}{0.85}
 \renewcommand{\textfraction}{0.1}
 \renewcommand{\floatpagefraction}{0.75}
+
+% To avoid Unicode char \u9: not set up for use with LaTeX error (taken from: http://tex.stackexchange.com/questions/83440/inputenc-error-unicode-char-u8-not-set-up-for-use-with-latex)
+\DeclareUnicodeCharacter{00A0}{ }
 
 % Rename Tables to Tablas in Spanish
 \addto\captionsspanish{\renewcommand*{\tablename}{Tabla}}

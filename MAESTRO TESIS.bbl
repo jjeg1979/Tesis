@@ -1,0 +1,106 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{LCS{\etalchar{+}}02}
+
+\bibitem[BY02]{chariphD:2002}
+Ballesteros~Yáñez, R.
+\newblock {\em Análisis Experimental de las Emisiones de Partículas de un
+  Motor Diésel con Combustibles Convencionales y Alternativos.}
+\newblock Tesis Doctoral, Universidad de Castilla-La Mancha, 2002.
+
+\bibitem[CS95]{caietal:1995}
+{Cai, J.}, {Sorensen, C.M.}
+\newblock Analysis of fractal cluster morphology parameters: structural
+  coefficient and density autocorrelation cutoff.
+\newblock {\em Journal of Colloid and Interface Science}, 171:470--473, 1995.
+
+\bibitem[dBA15]{delblancoPFC:2015}
+del Blanco~Adán, M.
+\newblock Determinación de la dimensión fractal de aglomerados 3d por el
+  método del box-counting.
+\newblock Proyecto Final de Carrera, Universidad de Castilla-La Mancha, 2015.
+
+\bibitem[EG12]{expositoPFM:2012}
+Expósito~González, J.~J.
+\newblock Effect of sintering on the fractal prefactor for agglomerates with
+  integer fractal dimension.
+\newblock Proyecto Final de Carrera, Universidad de Castilla-La Mancha, 2012.
+
+\bibitem[GCH99]{gorbunovetal:1999}
+{Gorbunov, B.}, {Clarke, A.G.}, {Hamilton, R.S.}
+\newblock Coagulation of soot particles and fractal dimension.
+\newblock {\em Journal of Aerosol Science}, 30:S445--S446, 1999.
+
+\bibitem[HA09]{martinphD:2009}
+Herreros~Arellanos, J.~M.
+\newblock {\em Estudio del efecto del combustible sobre el tamaño y forma de
+  las partículas emitidas por un motor Diésel.}
+\newblock Tesis Doctoral, Universidad de Castilla-La Mancha, 2009.
+
+\bibitem[LBM06]{lapuertaetal:2006}
+{Lapuerta, M.}, {Ballesteros, R.}, {Martos, F.J.}
+\newblock A method to determine the fractal dimension of diesel soot
+  agglomerates.
+\newblock {\em Journal of Colloid and Interface Science}, 303:149--158, 2006.
+
+\bibitem[LCS{\etalchar{+}}02]{leeetal:2002}
+{Lee, K.O.}, {Cole, R.}, {Sekar, R.}, {Choi, M.Y.}, {Kang, J.}, {Bae, C.},
+  {Shin, H.}
+\newblock Morphological investigation of the microstructure, dimensions, and
+  fractal geometry of diesel particulates.
+\newblock {\em Proceedings of the Combustion Institute}, 29:647--653, 2002.
+
+\bibitem[LMH07]{lapuertaetal:2007}
+{Lapuerta, M.}, {Martos, F.J}, {Herreros, J.M.}
+\newblock Effect of engine operating conditions on the size of primary
+  particles composing diesel soot agglomerates.
+\newblock {\em Journal of Aerosol Science}, 38:455--466, 2007.
+
+\bibitem[LMM10]{lapuertaetal:2010}
+{Lapuerta, M.}, {Martos, F.J.}, {Martín-González, G.}
+\newblock Geometrical determination of the lacunarity of agglomerates with
+  integer fractal dimension.
+\newblock {\em Journal of Colloid and Interface Science}, 346:23--31, 2010.
+
+\bibitem[MD90]{megaridisetal:1990}
+{Megaridis, C.M.}, {Dobbins, R.A.}
+\newblock Morphological description of flame-generated materials.
+\newblock {\em Combustion Science and Technology}, 71:95--109, 1990.
+
+\bibitem[MR06]{martosphD:2006}
+Martos~Ramos, F.~J.
+\newblock {\em Caracterización Morfológica de las Partículas Diésel.}
+\newblock Tesis Doctoral, Universidad de Castilla-La Mancha, 2006.
+
+\bibitem[OM12]{ferminphD:2012}
+Oliva~Miñana, F.
+\newblock {\em Estudio sobre los procesos de acumulación y regeneración de
+  hollín en una trampa de partículas Diésel con combustibles diferentes.}
+\newblock Tesis Doctoral, Universidad de Castilla-La Mancha, 2012.
+
+\bibitem[PKM04]{parketal:2004}
+{Park, K.}, {Kittleson, D.B.}, {McMurry, P.H.}
+\newblock Structural properties of diesel exhaust particles measured by
+  transmission electro microscopy (tem): relationships to particle mass and
+  mobility.
+\newblock {\em Aerosol Science and Technology}, 38:881--889, 2004.
+
+\bibitem[VL14]{vieraPFC:2014}
+Viera~Luis, E.
+\newblock Desarrollo de una interfaz de usuario para la determinación de la
+  dimensión fractal de aglomerados.
+\newblock Proyecto Final de Carrera, Universidad de Castilla-La Mancha, 2014.
+
+\bibitem[ZLSC03]{zhuetal:2003}
+{Zhu, J.}, {Lee, K.O.}, {Sekar, R.}, {Choi, M.Y.}
+\newblock Morphological study of the particulate matter from a light-duty
+  diesel engine.
+\newblock {\em Procceedings of the third joing meeting of the U.S. Sections of
+  the Combustion Institute}, 2003.
+
+\bibitem[ZR02]{zuritaetal:2002}
+{Zurita-Gotor, M.}, {Rosner, D.E.}
+\newblock Effective diameters for collisions of fractal-like aggregates:
+  recommendations for improved aerosol coagulation frequency predictions.
+\newblock {\em Journal of Colloid and Interface Science}, 255:10--26, 2002.
+
+\end{thebibliography}
