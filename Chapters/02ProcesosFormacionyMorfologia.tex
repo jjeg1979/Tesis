@@ -1,0 +1,550 @@
+\pagestyle{plain}
+\chapter{PROCESOS DE FORMACIÓN \\ Y MORFOLOGÍA DE LAS PARTÍCULAS DIÉSEL} \label{cap:ProcesosFormacionyMorfologia}
+\vspace{0.2cm}
+\rule{\linewidth}{1.5pt}\\
+\startcontents[chapters]
+\printcontents[chapters]{}{1}{}
+\vspace{0.2cm}
+\rule{\linewidth}{1.5pt}\\
+%\minitoc
+\newpage
+\section{Introducción} \label{sec:Introduccion}
+
+\par Durante el proceso de combustión que tiene lugar dentro de la cámara de combustión de un motor diésel el carbono y el hidrógeno que constituyen el combustible se oxidan produciendo luz, dióxido de carbono y vapor de agua. Estos procesos de combustión en motores de combustión interna alternativos permiten al ser humano obtener muchos de los producto y servicios que resultan imprescindibles en la actual sociedad del bienestar. Sin embargo, todo proceso de combustión lleva aparejado un problema de contaminación ambiental. Esto se debe a que la propia composición del combustible, la fluidodinámica de la mezcla aire-combustible y las temperaturas locales dentro de la cámara de combustión hacen que se formen compuestos como el \index{monóxido de carbono}monóxido de carbono, dióxido y trióxido de azufre, compuestos oxigenados de nitrógeno, hidrocarburos y partículas de \index{hollín} hollín. 
+\par Las partículas de hollín ha sido objeto de estudio en muchos trabajos, véase por ejemplo \cite{chariphD:2002} u otros muchos autores. La inmensa mayoría de ellos basan sus argumentaciones sobre las emisiones de partículas en los procesos de formación de éstas en el interior de la cámara de combustión. Existen otros tantos autores que estudian el comportamiento y los efectos de las partículas fuera del vehículo, cuando llegan a la atmósfera, como por ejemplo \cite{kimetal:2001} y \cite{siegmannetal:1999}. La razón por la que predominan estos estudios es porque tanto en la cámara de combustión como en la atmósfera, la actividad química es muy importante, a pesar de que en la cámara de combustión lo es con cinéticas muy rápidas (tiempos de residencia muy cortos) y en la atmósfera lo es con cinéticas muy lentas (tiempos de residencia muy largos). Por esto mismo hay pocos autores que estudien la evolución de las partículas a lo largo del tubo de escape. Pero si el aspecto de las partículas que se estudia es el de su morfología, el tránsito de éstas por el tubo no deja a las partículas inalteradas. Por esta razón, esta Tesis Doctoral se centra en el estudio de algunas características morfológicas de las partículas diésel en diversos puntos de escape, si bien nuevamente es necesario recurrir a los procesos de formación en la cámara para explicar muchas de las observaciones.
+
+\par Las características morfológicas en las que se centra esta Tesis son el tamaño y la irregularidad de las partículas diésel. Este capítulo comienza con un epígrafe donde se exponen los distintos fenómenos de transporte que actúan sobre la partícula condicionando el movimiento de ésta en el seno del gas portador. Posteriormente, se describen los distintos fenómenos de transporte que conducen a la conformación de las partículas de hollín hasta adquirir la forma en que circundan el gas. Primero se estudia la generación y el crecimiento de las partículas primarias, posteriormente se describen las distintas uniones a las que se pueden ver sometidas, y por último se estudia cómo la temperatura puede afectar a la estructura de las partículas. Una vez que se ha analizado cómo se pueden conformar las partículas de hollín, se exponen las distintas definiciones de los diámetros característicos de las partículas y las funciones de distribución que los representan.
+
+\par Por último, se resumen lo distintos efectos que tienen las partículas diésel sobre la salud humana y sobre el medio ambiente. Se definirán distintos parámetros para cuantificar dicho impacto y cómo se miden las emisiones. Este estudio del impacto sobre la salud humana y el medio ambiente justifica la realización de estudios como éste, que tienen como objetivo conocer más y mejor la conformación y morfología de las partículas diésel. Dicho conocimiento permitirá diseñar estrategias más adecuadas para reducir en la medida de lo posible este impacto sobre la salud pública y el medio ambiente.
+
+\section{Movimientos de las partículas diésel}\label{sec:Movimientos}
+
+\par La evolución de la composición de un flujo \index{multicomponente} multicomponente (compuesto de $n$ componentes) está gobernada por la ecuación de \index{conservación de las especies} conservación de las especies. Esta ecuación puede plantearse para cada una de las especies aunque lo habitual es plantear $n-1$ ecuaciones con el fin de mantener como ecuación independiente la de continuidad. En general, la ecuación se escribe:
+
+\begin{equation}
+\label{ec:continuidad}
+\frac{\partial \rho Y_i}{\partial t}\,=\, \nabla \cdot (\rho \vec{c} Y_i)+ \nabla \cdot (\vec{J_i})\,=\, \dot{w}_i
+\end{equation}
+
+siendo \nomenclature{$Y_i$}{Concentración de la especie $i$.} $Y_i$ la concentración de la especie $i$, \nomenclature{$\rho$}{Densidad del fluido.} $\rho$ la densidad del fluido y \nomenclature{$\vec{c}$}{Vector velocidad del fluido.} $\vec{c}$ su vector velocidad. La ecuación expresa que las variaciones de concentración con el tiempo (primer término) pueden ser debidas a procesos convectivos, es decir, asociadas a la velocidad de flujo (segundo término), a procesos difusivos (tercer término) o a la presencia de algún término fuente (segundo miembro). Si se considera que la especie $i$ está muy diluida sobre una especie muy abundante y portadora $j$, la expresión más habitual del término difusivo indica que el transporte másico ocurre en la dirección de las concentraciones decrecientes de las especies (ley de Fick):
+
+\begin{equation}
+\label{ec:leydefick}
+\vec{J}_i\,=\,-\rho D_{ij} \nabla Y_i
+\end{equation}
+
+donde \nomenclature{$D_{ij}$}{Coeficiente de difusión de la especie $i$ en la especie $j$.} $D_{ij}$ es el coeficiente de difusión de la especie $i$ en la $j$. Sin embargo, la expresión más general de este término incluye dos términos más, que tienen en cuenta las contribuciones al transporte másico de los gradientes de temperatura y presión, \cite{landauetal:1987}:
+
+\begin{equation}
+\label{ec:leydefickgeneral}
+\vec{J}_i\,=\,- \rho D_{ij} \left( \nabla Y_i + Y_i \frac{\alpha_T}{T} \nabla T + Y_i \frac{\alpha_p}{p} \nabla p \right)
+\end{equation}
+
+donde \nomenclature{$\alpha_T$}{Coeficiente de difusión térmico.} $\alpha_T$ es el \index{coeficiente de difusión térmico} coeficiente de difusión térmico y \nomenclature{$\alpha_p$}{Coeficiente de barodifusión.} $\alpha_p$ el \index{coeficiente de barodifusión} coeficiente de barodifusión.
+
+\par El primer término en la ecuación \ref{ec:leydefickgeneral} es la contribución de la ley de Fick al transporte difusivo total másico, de tal manera que hay un transporte de masa desde las zonas de mayor concentración a las de menor concentración. El segundo término es la contribución cruzada al transporte de masa causada por un gradiente térmico. Este fenómeno es conocido como \index{efecto Soret} efecto Soret. Y el tercer término consiste en la aportación cruzada al transporte másico difusivo a consecuencia de cambios en presiones locales. Según \cite{landauetal:1987} este término difusivo se debe tener en cuenta sólo cuando existen gradientes de presiones considerables en el fluido, como son los casos en que el flujo es transónico o supersónico. Para flujos subsónicos la difusión cruzada a consecuencia del gradiente de presión no es importante.
+
+\par Según la ecuación \ref{ec:leydefickgeneral} el transporte másico difusivo se ha enunciado para la mezcla de dos fluidos, pero igualmente es aplicable a un fluido que no sea homogéneo en sus fases, \cite{masonetal:1962}. En este caso, los anteriores fenónemos de transporte se denominan, respectivamente, \index{difusión browniana} difusión browniana, \index{termofóresis} termofóresis y \index{barofóresis} barofóresis. Si en el seno del fluido existen nanopartículas en suspensión, la difusión másica del fluido afecta directamente al transporte de estas nanopartículas. En efecto, el transporte másico difusivo del gas debido a la variación de la concentración produce fuerzas no equilibradas en las partículas como consecuencia del intercambio de momento desigual entre las partículas y las moléculas del fluido. Estas fuerzas hacen que las partículas se muevan de regiones de mayor concentración a regiones de menor concentración. Este fenómeno es la difusión browniana.
+
+\par El transporte másico difusivo del gas debido al gradiente térmico crea, igual al caso anterior, un movimiento diferencial de las partículas desde las regiones de mayor temperatura a las de menor temperatura. Este efecto es la termofóresis. La barofóresis sólo es significativa bajo grandes gradientes de presión. Y por último, en el caso de que la mezcla gaseosa portadora de partículas no sea uniforme en composición, las partículas en suspensión están sometidas a una fuerza debida a los gradientes de concentración de los componentes gaseosos. Este fenómeno de transporte másico de partículas se llama \index{difusiofóresis} difusiofóresis, y ha sido despreciado en la ecuación \ref{ec:leydefickgeneral}, ya que se considera que la mezcla gaseosa es uniforme.
+
+\par En el caso particular del flujo de escape de un motor diésel tanto la barofóresis como la difusiofóresis se pueden despreciar frente a la difusión browniana, por las razones apuntadas. Sin embargo, la termofóresis no se puede despreciar ya que los gradientes de temperaturas sí son significativos, sobre todo entre el gas y el tubo de escape, radialmente.
+
+\par El movimiento de las partículas diésel en el seno del gas de escape se debe fundamentalmente a dos fenómenos, al difusivo (difusión browniana y termofóresis) y al arrastre que ejerce el gas sobre la partícula, el cual es asimilable a un movimiento convectivo. Este fenómeno aparece siempre y cuando haya una diferencia de velocidades entre la partícula y el gas. Las partículas con tamaños de unidades o decenas de nanómetros se caracterizan porque sus colisiones son principalmente de carácter browniano, es decir, son provocadas por el movimiento browniano. Esto sucede siempre y cuando la distancia media recorrida entre choques de partículas sea del orden de pocos nanómetros, es decir del propio tamaño de las partículas. También suceden colisiones brownianas cuando la temperatura a la que están las partículas es muy elevada, ya que la distancia media recorrida en el movimiento browniano de las partículas es directamente proporcional a la temperatura de la misma. Las simulaciones realizadas por \cite{frenklach:2002}, \cite{kazakovetal:1998} y \cite{stasioetal:2002} demuestran que las colisiones entre partículas primarias que ocurren en el interior de la cámara de combustión, donde la temperatura es muy alta, son de tipo browniano.
+
+\par \cite{kimetal:2002} y \cite{kimetal2:2002} realizan una simulación para las colisiones de material particulado una vez que llegan al ambiente. \cite{hisaedaetal:2000} y \cite{hayasietal:1999} realizan simulaciones en el interior del tubo de escape en condiciones especiales, es decir, no comunes en el funcionamiento de un motor diésel. En estos casos consideran que las colisiones son del tipo browniano, porque la concentración es muy alta, es decir, la distancia entre partículas es del orden del movimiento de tipo browniano característico de cada partícula.
+
+\par En el caso del flujo en el tubo de escape, la temperatura del gas no es elevada y además la concentración de material particulado tampoco lo es. En estas condiciones las colisiones de las partículas diésel no tienen, en su generalidad, carácter browniano sino que son ocasionadas por el arrastre del fluido sobre las partículas. También, en estas condiciones (condiciones características dentro del tubo de escape) el camino libre medio que tiene que recorrer una partícula para colisionar con otra es de varios órdenes superior a la distancia media recorrida por la partícula en su movimiento de tipo browniano.
+
+\section{Procesos de formación de las partículas}
+\subsection{Introducción}
+
+\par Los aglomerados diésel de hollín están compuestos por partículas primarias. Tal y como se explica en \cite{varios:2011} se considera \index{partícula primaria} como partícula primaria a cualquier materia presente en los gases de salida que se encuentre en estado líquido o sólido en condiciones aproximadamente ambientales. La consecuencia directa de esta definición es que a la hora de analizar las emisiones de partículas es imprescindible estudiar el proceso de dilución del escape con el aire ambiente. Las partículas primarias presentan geometrías muy similares a esferas, como se muestra en la Figura \textit{incluir referencia a la figura}. Además, tanto el diámetro medio de estas partículas como la desviación típica del diámetro medio varían muy poco en función de las distintas condiciones de funcionamiento del motor, \cite{leeetal2:2002}, \cite{zhuetal:2003}.  Es usual describir las partículas primarias con una función de distribución de tamaños uniforme, es decir monodispersa, con diámetros medios del orden de 25 nm, \cite{smallwoodetal:2002, wentzeletal:2003}. Aunque dos aglomerados tengan el mismo número de partículas primarias, éstas se disponen en cada aglomerado de manera distinta, haciendo que cada uno tenga una forma irregular distinta, con diferente compactación y tamaño, y por lo tanto con diferente densidad aparente, \cite{lapuertaetal:2003}. Contrariamente a las partículas primarias, los aglomerados no son uniformes ni en tamaño ni en forma. En realidad son polidispersos, así que para su descripción es necesario hacer un estudio estadístico.
+
+\par Como argumenta R. Ballesteros \cite{chariphD:2002} y se encuentra sucintamente expuesto en \cite{varios:2011}, los procesos físicos y químicos que intervienen en la cámara de combustión de las partículas diésel son numerosos y complejos. Debido a que estos procesos físicos y químicos pueden ocurrir tanto en la línea de escape como en el momento de dilución en la atmósfera (Figura \ref{fig:procesosformacionyemision}), se considera que una determinación exacta de las emisiones de partículas requiere una simulación de estos procesos de dilución, procesos que obligan a distinguir entre \index{partículas primarias} partículas primarias, aquellas que se forman directamente como producto de la combustión y se miden justo a la salida del cilindro, y \index{partículas secundarias} partículas secundarias, resultantes de alguno de los procesos atmosféricos mencionados anteriormente, tanto en el escape como ya directamente en la atmósfera, y que se recogen usualmente mediante sistemas de dilución situados al final del sistema de escape o en una derivación del mismo. Son precisamente estas partículas secundarias aquellas que son limitadas en las diferentes normativas mundiales.
+
+\begin{figure}[ht]
+\centering
+	\includegraphics[width=0.9\textwidth]{EsquemaformacionyEmision.png}	 
+	\caption{Esquema de formación y emisión de partículas} \label{fig:procesosformacionyemision}
+\end{figure} 
+
+\par En este apartado, se describirán las características físicas y químicas de las partículas partiendo del estudio del substrato inicial (hollín), sus principales mecanismos de formación, así como su composición y sus características morfológicas:
+
+\begin{enumerate}
+\item Hollín.
+\item Formación de las partículas y composición.
+\item Distribución de tamaños de partículas
+\end{enumerate}
+
+\subsubsection{Hollín}
+
+\par Existe un límite teórico para la aparición de partículas de hollín que se puede calcular planteando la siguiente reacción para un combustible genérico oxigenado:
+
+\begin{equation}
+\label{ec:limitehollin}
+C_nH_mO_p + yO_2 \rightarrow (p + 2y)CO + \left( \frac{m}{2} \right) H_2 + (n-p-2y)C_{(s)}
+\end{equation}
+
+Según la reacción \ref{ec:limitehollin}, planteada inicialmente para combustibles convencionales \cite{haynessetal:1981}, el límite de \index{dosado} dosado local que favorece la aparición de hollín se calcula para $n\,=\,2p+y$. En esas condiciones la relación masa de combustible frente a masa de agente oxidante es igual al:
+
+\begin{equation}
+\label{ec:relacionmasacombagoxidantedosadofavorecehollin}
+\frac{m_f}{m_{O_2}}\,=\,\dfrac{12n+m+16p}{(n-p)16}\,=\,\dfrac{0,75+0,0625\frac{m}{n}+\frac{p}{n}}{1-\frac{p}{n}}
+\end{equation}
+
+\par Si se plantea la reacción estequiométrica \ref{ec:hollinestequiometrico}:
+
+\begin{equation}
+\label{ec:hollinestequiometrico}
+C_nH_mO_p + \left( n + \frac{m}{4} - \frac{p}{2} \right) O_2 \rightarrow nCO_2 + \left( \frac{m}{2} \right) H_2O
+\end{equation}
+
+\par La relación entre la masa de combustible y la masa de agente oxidante para esta reacción es:
+
+\begin{equation}
+\label{ec:relacionmasacombagoxidanteestequiometrico}
+\left( \dfrac{m_f}{m_{O_2}} \right)_e\,=\,\dfrac{12n+m+16p}{\left( n + \frac{m}{4} - \frac{p}{2} \right)32}\,=\,\dfrac{0.375+\frac{m}{n}+0.5\frac{p}{n}}{1+0.25\frac{m}{n} - 0.5\frac{p}{n}}
+\end{equation}
+
+\par Teniendo en cuenta las expresiones \ref{ec:relacionmasacombagoxidantedosadofavorecehollin} y \ref{ec:relacionmasacombagoxidanteestequiometrico} se puede calcular el dosado relativo que se plantea como límite teórico para la aparición de hollín como:
+
+\begin{equation}
+\label{ec:dosadorelativoaparicionhollin}
+F_r\,=\, \dfrac{2+0.5\frac{m}{n}-\frac{p}{n}}{1-\frac{p}{n}}
+\end{equation}
+
+La figura \ref{fig:limiteteoricoaparicionhollin} representa este límite teórico en función de la relación $m/n$ y $p/n$ del combustible. Si se asume, de acuerdo con el modelo de Dec, que una de la principales fuentes de formación de hollín en motores diésel es la región de combustión premezclada rica que tiene lugar tras el \textit{lift off}, cuyo dosado relativo se encuentra alrededor de 4 \cite{lapuertaetal:2010}, se puede comprobar que existen algunos combustibles con altos valores de $m/n$ y $p/n$ (estos últimos combustibles oxigenados) cuyos valores de dosado relativo límite de formación de hollín es claramente superior.
+
+\begin{figure}[ht]
+\centering
+	\includegraphics[width=0.6\textwidth]{LimiteTeoricoAparicionHollin.png}	 
+	\caption{Límite teórico de aparición de hollín} \label{fig:limiteteoricoaparicionhollin}
+\end{figure} 
+
+\par Los mecanismos que envuelven el proceso de generación de partículas de hollín han sido extensamente estudiados. En general, los investigadores coinciden en la mayor probabilidad de colisión de dos compuestos aromáticos policíclicos, que conduce a asumir que la primera partícula carbonosa o núcleo de hollín que se forma se produce tras esta colisión, dando lugar a una partícula tridimensional. Otra de las vías de formación de núcleos de hollín pasa por reacciones de deshidrogenación de moléculas del combustible bajo temperaturas locales muy elevadas sin pasar por la formación de especies aromáticas precursoras. La formación de hollín en motores diésel por esta ruta no es predominante debido a las temperaturas características del proceso de combustión en estos motores (Figura \ref{fig:esquemaprocesoformacionhollin}).
+
+\begin{figure}[ht]
+\centering
+	\includegraphics[width=0.6\textwidth]{Esquemaprocesodeformaciondehollin.png}	 
+	\caption{Esquema de los procesos de formación de hollín} \label{fig:esquemaprocesoformacionhollin}
+\end{figure} 
+
+\par El hollín formado se compone de partículas carbonosas (partículas primarias) estructura-das en redes cristalinas que contienen alrededor de un 1 \% en peso de hidrógeno, es decir, la proporción correspondiente a la fórmula empírica media de $C_8H$ (Figura \ref{fig:esquemaformacionparticulasprimariashollin}). Cada átomo de hidrógeno, que se separa durante la deshidrogenación, activa a otra molécula produciendo su nucleación y crecimiento, adoptando estructuras en forma de red. Este proceso tiene lugar principalmente en la superficie de llamas poco expuestas al oxígeno del aire en un rango estrecho de altas temperaturas. La microestructura de las partículas primarias es similar a la del grafito, en la que la red cristalina está formada por estructuras hexagonales denominadas láminas de grafeno. Estas láminas de grafeno se unen formando cristales (típicamente se encuentran alrededor de 2 a 5 láminas por cristal), que a su vez se unen con diferentes orientaciones formando las partículas primarias de hollín (del orden de $10^3-10^4$ cristales y $10^5-10^6$ átomos de carbono por partícula primaria). 
+
+\begin{figure}[ht]
+\centering
+	\includegraphics[width=\textwidth]{Esquemaformacionparticulasprimariashollin.png}	 
+	\caption[Esquema de formación de partículas primarias de hollín]{Esquema de formación de partículas primarias de hollín: (a) láminas de grafeno (b) cristales y (c) partículas primarias} \label{fig:esquemaformacionparticulasprimariashollin}
+\end{figure} 
+
+A continuación se describe brevemente cada una de las etapas que conducen a la forma-ción de partículas de hollín desde la llama al sistema de escape (Figura \ref{fig:procesosformacionyemision}): 
+
+\begin{enumerate}
+\item Formación de especies precursoras.
+\item Generación o nucleación de partículas de hollín (partículas primarias).
+\item Oxidación de las partículas.
+\item Crecimiento de la superficie de las partículas y aglomeración de las mismas.
+\item Condensación y/o adsorción de hidrocarburos en la superficie de las partículas.
+\end{enumerate}
+
+\par Por la válvula de escape pueden salir partículas primarias de hollín además de aglomerados de partículas primarias de hollín (partículas secundarias).
+
+\subsubsection{Nucleación de las partículas}\label{subsubsec:nucleacion}
+
+\par es el proceso en el que se produce la formación de una fase sólida (partículas de hollín) desde una fase vapor en regiones localmente ricas de combustible y alta temperatura (entre 1300-1600 K). Este proceso, generalmente, consiste en la adición de pequeños hidrocarburos radicales (acetileno y otros precursores en fase gas) a moléculas aromáticas de mayor tamaño, hasta que éstas alcanzan un tamaño suficiente como para convertirse en un núcleo de partícula con un diámetro en el rango de 1-2 nm y 10 uma (unidades de ma-sa atómica). Este núcleo posteriormente en la etapa de crecimiento superficial irá progresivamente disminuyendo su proporción de hidrógeno. Debido a su pequeño tamaño estas partículas no contribuyen significativamente a la masa total de hollín, pero sí tienen una influencia muy significativa en la producción final de hollín, ya que actúan como núcleos para el posterior crecimiento superficial. La nucleación tiene lugar cerca de la zona de reacción primaria donde la temperatura y la concentración de radicales e iones son máximas, tanto en llamas premezcladas como en difusivas. 
+
+\subsubsection{Crecimiento superficial de las partículas}\label{subsubsec:crecimientosuperficial}
+
+\par El crecimiento de la partícula puede deberse al propio crecimiento superficial de la partícula, a la coagulación entre partículas, a la agregación o a la aglomeración. El crecimiento de la partícula por coagulación, agregación y aglomeración, se trata en los epígrafes posteriores.
+
+\begin{enumerate}
+\item Superficial: en esta etapa se produce la adición de masa en la superficie de una partícula ya nucleada. En este proceso se añaden hidrocarburos en fase gas, generalmente acetilenos e HAP, en los sitios reactivos de la superficie de las partículas y a alta temperatura. Esta etapa suele ocurrir simultáneamente a la nucleación, no pudiéndose distinguir entre el final de la nucleación y el comienzo del crecimiento superficial. Aquí es donde se produce la mayor parte de la masa de hollín, por tanto es importante el tiempo que se encuentran las partículas en esta etapa para determinar la cantidad másica y volumétrica de hollín, mientras que el número de partículas no se ve afectado por este proceso. El crecimiento superficial continúa desde la zona de reacción primaria hasta otras regiones con una menor temperatura y menor concentración de hidrocarburos. La tasa de crecimiento superficial de las partículas de menor tamaño es más alta que las de mayor debido a que tienen más sitios activos (con radicales activos) por unidad de masa \cite{hiroyasuetal:1976}.  
+
+\item Coagulación: es un fenómeno físico, no químico. La coagulación o coalescencia se produce por colisión de dos partículas primarias aproximadamente esféricas, obteniéndose una única partícula resultante manteniendo la identidad esférica y cuya masa es la suma de las masas de las dos partículas primarias que intervienen en la colisión. Por tanto, este proceso resulta en una reducción significativa del número de partículas, un aumento del tamaño de las mismas manteniendo constante la masa de las partículas \cite{haynessetal:1981}. 
+\end{enumerate}
+
+\subsubsection{Oxidación}\label{subsubsec:oxidacion}
+
+\par La oxidación es el proceso mediante el cual se produce la conversión de carbono o hidrocarburos a productos de la combustión, que generalmente son $CO$ (oxidación parcial), $CO_2$ (oxidación completa) y agua. Aunque el oxidante inicialmente es el oxígeno del gas admitido, otros productos de la disociación de éste (como el oxígeno atómico) y de las primeras etapas de la combustión (el radical hidroxilo OH) actúan como oxidantes de los propios productos intermedios generados y en particular del hollín formado. La oxidación por el radical OH es predominante bajo condiciones ricas y estequiométricas del combustible, mientras que en condiciones localmente pobres (alto dosado) participan tanto el radical hidroxilo como el oxígeno molecular. El proceso de oxidación a $CO$ y $CO_2$ tanto de los HAP como del hollín es un proceso que compite con el de formación y como resultado de estos dos procesos contrapuestos se obtiene su tasa neta de formación. El proceso de oxidación del carbono perteneciente a una partícula de hollín se produce en dos etapas. En la primera etapa se produce la adsorción del oxidante a la superficie de la partícula y en la segunda se produce la desorción del producto oxigenado ($CO$ ó $CO_2$) desde la superficie de la partícula. El proceso de oxidación comienza a temperaturas superiores a 1300 K debido a la microestructura tipo grafítica que dota de una gran resistencia a la oxidación de las partículas. El modelo más usado respecto de la oxidación es el modelo semiempírico de Nagle y Strickland-Constable que correlaciona la oxidación de pirografito para presiones parciales de oxígeno entre 0.1 y 0.6 atmósferas y un rango de temperaturas de 1100-2500 K. En general, se puede afirmar que la velocidad de oxidación se incrementa hasta los 2000 K, siendo a partir de este punto cuando la velocidad de oxidación permanece prácticamente constante, como puede observarse en la Figura \ref{fig:velocidadoxidacionhollinllamas}.
+
+\begin{figure}[ht]
+\centering
+	\includegraphics[width=0.5\textwidth]{VelocidadOxidacionHollinLlamas.png}	 
+	\caption{Velocidad de oxidación del hollín en llamas} \label{fig:velocidadoxidacionhollinllamas}
+\end{figure} 
+
+\subsubsection{Aglomeración y agregación}\label{subsub:aglomeracionyagregacion}
+
+\par Estos dos conceptos son ligeramente diferentes, la agregación es la unión de partículas mediante fuerzas cohesivas atómicas o moleculares produciendo agregados lineales de gran estabilidad. Y la aglomeración es la unión mediante fuerzas de cohesión débiles como por ejemplo la tensión superficial. En la mayoría de las situaciones se usan los términos de agregación (agregado) y aglomeración (aglomerado) indistintamente para referirse a la consecuencia de las colisiones entre partículas y/o aglomerados/agregados de partículas (Figura \ref{fig:fototemagregadohollin}). La aglomeración, al igual que la coagulación, supone una considerable disminución del número de partículas/aglomerados y un aumento del tamaño de los aglomerados, mientras que no se modifica la masa de las partículas. Una vez se han formado las partículas primarias, en primer lugar éstas colisionan entre sí formando aglomerados de mayor tamaño compuestos por varias partículas primarias. Pero a continuación, pueden producirse colisiones entre partículas primarias y los aglomerados y colisiones entre los aglomerados. En función de la relación entre el camino libre medio (distancia que recorre una partícula/aglomerado entre colisiones sucesivas) y el tamaño de la partícula/aglomerado existen diferentes tipos de aglomeraciones (en régimen balístico y limitadas por difusión) que tienen como consecuencia la forma del aglomerado, que es cuantificada por medio de su dimensión fractal. 
+Algunas de estas estructuras de hollín formadas durante estos procesos son muy estables, pero otras tienen reacciones de formación muy reversibles, y el contacto con radicales hidroxilo a alta temperatura favorece su reconversión a hidrocarburos aromáticos policíclicos.
+
+\begin{figure}[ht]
+\centering
+	\includegraphics[width=0.3\textwidth]{FotoTEMagregadohollin.png}	 
+	\caption[Microfotografía TEM de un agregado de hollín]{Microfotografía TEM de un agregado de hollín recogido por termofóresis y compuesto por partículas primarias} \label{fig:fototemagregadohollin}
+\end{figure} 
+
+\par Algunas de estas estructuras de hollín formadas durante estos procesos son muy estables, pero otras tienen reacciones de formación muy reversibles, y el contacto con radicales hidroxilo a alta temperatura favorece su reconversión a hidrocarburos aromáticos policíclicos.
+
+\subsection{Formación de partículas y composición}\label{subsec:formacionparticulasycomposicion}
+
+\par A lo largo del conducto de escape se produce una reducción de temperatura del gas y los agregados/aglomerados de hollín pueden verse sometidos, bajo estas circunstancias, a fenómenos de adsorción y de condensación de hidrocarburos ya sea por condensación superficial o como nucleación de gotas líquidas (Figura \ref{fig:esquemaprocesoformacionhollin}). Sin embargo, estos procesos ocurren mayoritariamente en el proceso de dilución (proceso que define a las partículas) y en función de cómo se realice este proceso y las características del gas de escape, estos fenómenos pueden acentuarse o verse reducidos. 
+
+\par El fenómeno de adsorción consiste en el crecimiento de la partícula por la adhesión en fase gas de moléculas de hidrocarburos sin quemar o parcialmente quemados a la superficie de la partícula de hollín por medio de fuerzas tanto químicas como físicas (fuerzas de Van der Waals). Por otro lado, el crecimiento también puede ser por condensación cuando los hidrocarburos que se añaden a la superficie de las partículas se encuentran en fase líquida. Por último, la nucleación es la formación de un pequeño núcleo a partir de los hidrocarburos en fase líquida. El hecho de que se produzca uno u otro fenómeno depende fundamentalmente del grado de saturación  (cociente entre la presión parcial del hidrocarburo en el gas de escape y la presión de saturación del mismo) y de la superficie de la partícula disponible en el gas de escape. Cuando el grado de saturación es menor que uno el único mecanismo posible de adición de hidrocarburos a las partículas es la adsorción en fase gaseosa, mientras que si es mayor que uno se puede producir adsorción desde fase condensada o nucleación de hidrocarburos. Si no existe superficie disponible para que los hidrocarburos se adsorban o condensen y el grado de saturación es mayor que la unidad, esos hidrocarburos se nuclearían, dando lugar a pequeñas gotas líquidas de hidrocarburos, que generalmente son las responsables de la existencia de una moda denominada moda núcleos (Figura \ref{fig:distribuciontipicaparticulas}) en las distribuciones de tamaños de partículas. 
+
+\begin{figure}[ht]
+\centering
+	\includegraphics[width=0.8\textwidth]{Distribuciontipicaparticulas.png}	 
+	\caption{Distribución típica de los tamaños de partículas} \label{fig:distribuciontipicaparticulas}
+\end{figure} 
+
+\par Estos procesos, como ya se ha comentado, pueden ocurrir en el conducto de escape, pero sobre todo, tienen lugar en el proceso de dilución. Por tanto, en función de cómo se haga este proceso se puede llegar a condiciones favorables para que los fenómenos de adsorción y condensación se produzcan o se puedan evitar. En la Figura \ref{fig:esquemaprocesodilucion} se muestra cualitativamente cómo sería el proceso de dilución en función de tres diferentes grados de dilución partiendo del estado inicial denotado como 0. Si el grado de dilución es pequeño el proceso acabaría en el punto 1, el cual está bastante alejado de la curva de saturación del hidrocarburo y por tanto, la probabilidad de producir nucleación es baja. Si se aumenta el grado de dilución a uno intermedio denotado como 2, este punto está bastante más cerca de la zona de saturación siendo máxima la probabilidad de nucleación. Por último, si se aumenta el grado de dilución hasta llegar a 3, la probabilidad de nucleación es menor ya que este punto está más alejado de la zona de saturación que el punto 2. En la misma figura, se puede apreciar el efecto que sobre estos fenómenos tiene también la temperatura del gas de escape. Cuando ésta es mayor (punto 0'), la probabilidad de nucleación es menor puesto que la región de saturación se aleja con respecto al caso de una menor temperatura de escape. 
+
+\begin{figure}[ht]
+\centering
+	\includegraphics[width=0.8\textwidth]{Esquemaprocesodilucion.png}	 
+	\caption{Esquema del proceso de dilución para diferentes grados de dilución y temperaturas} \label{fig:esquemaprocesodilucion}
+\end{figure} 
+
+\par Los procesos que conducen a la formación de partículas condicionan su composición \cite{smith:1982}. Las partículas están compuestas por dos fracciones fácilmente separables mediante un proceso de extracción química:
+
+\begin{enumerate}
+\item Una fracción insoluble que puede tener compuestos orgánicos e inorgánicos denominada comúnmente ISF, en la que prevalece principalmente el carbono (hollín), acompañado por otros compuestos tales como sulfatos, sales, agua y materiales inorgánicos procedentes de aditivos.
+\item Una fracción orgánica soluble (SOF), denominada así por su solubilidad en el disolvente orgánico empleado en la extracción, compuesta por hidrocarburos y otros compuestos orgánicos procedentes directamente del combustible  y del aceite lubricante, o bien de reacciones en el interior de la cámara de combustión en el caso del combustible inyectado. Esta adhesión al substrato de hollín ocurre mediante los procesos de condensación y adsorción que tienen lugar durante su recorrido por el sistema de escape, donde el descenso de temperatura se hace más rápido.
+\end{enumerate}
+
+\par Una composición media típica de las partículas emitidas se muestra en la Figura \ref{fig:ejemplocomposiciontipicaparticulas}
+
+\begin{figure}[ht]
+\centering
+	\includegraphics[width=0.6\textwidth]{Ejemplocomposicionquimica.png}	 
+	\caption{Ejemplo de composición típica de las partículas} \label{fig:ejemplocomposiciontipicaparticulas}
+\end{figure} 
+
+\par Aunque la separación de las partículas diésel en ISF y SOF es la más ampliamente extendida en bibliografía, no es la única. Algunos trabajos utilizan métodos térmicos para separar las partículas en dos fracciones, una volátil denominada VOF y compuesta por hidrocarburos y otros compuestos orgánicos y agua, y otra fracción no volátil, principalmente formada por hollín.
+
+\par En todo caso, e independientemente del método utilizado para determinar la composición de las partículas, los dos principales componentes de éstas son el hollín, presente en la ISF si se emplea extracción química o en la fracción no volátil si se emplean métodos térmicos, y los hidrocarburos y demás compuestos orgánicos, que forman parte de la SOF en el caso de la extracción química o de la VOF en el caso de los métodos térmicos.
+
+\subsection{Colisiones entre partículas} \label{subsec:colisiones}
+
+\par Tras la colisión entre dos partículas puede suceder que éstas se disgreguen en más de dos partículas o que se unan. Que ocurra una u otra cosa depende, fundamentalmente, de la energía cinética de ambas partículas en el momento de la colisión y de las fuerzas coercitivas internas que tenga cada partícula. Por lo general, la colisión entre partículas tiene como consecuencia la unión de las dos partículas que colisionan, las cuales dejan de existir como tales, para formar parte de una partícula nueva cuya masa es la suma de las masas de las partículas y cuya velocidad es aquélla que cumple la conservación de la cantidad de movimiento. Esta descripción de las colisiones es muy simple, pues en realidad en la formación de la partícula nueva intervienen más factores además de la masa de las partículas originales.
+
+\par La colisión se debe a dos fenómenos principalmente. Por un lado la colisión debida a la difusión, básicamente browniana, entre partículas, y por otro lado la colisión debida a acciones forzadas sobre las partículas, tales como la convección del propio fluido, acciones gravitacionales, acciones magnéticas o eléctricas sobre partículas.
+
+\par Cuando colisiona una partícula cualquiera de masa $m_i$ con su complementaria hasta $m$, es decir, con una partícula de masa $m - m_i$, se genera una nueva partícula de masa $m$. La evolución de la función de distribución de masa de partículas debida a las colisiones se modela mediante la siguiente ecuación integro-diferencial, \cite{fuchs:1989}:
+
+\begin{equation}
+\label{ec:colisionesintegrodiferencial}
+\dfrac{dn(m,t)}{dt}\,=\, \frac{1}{2} \int_0^m K(m_i,m-m_i)n(m_i)n(m-m_i)dm_i-n(m)\int_0^\infty K(m,m_i)n(m_i)dm_i
+\end{equation}
+
+donde $m$ es la masa de la partícula formada como consecuencia de la colisión entre dos partículas de masa $m_i$ y $m-m_i$, $n(m_i)$ es el número de partículas con masa $m_i$. $K$ es la frecuencia de colisiones entre dos partículas cualesquiera. La variación temporal del número de partículas con masa $m$ depende de la producción de partículas de masa $m$ y de la pérdida de las partículas de masa $m$ que se hayan generado en un tiempo anterior. El primer sumando de la derecha de la ecuación \ref{ec:colisionesintegrodiferencial} representa la producción de partículas de masa $m$ en el instante actual. A este sumando hay que afectarle del coeficiente 0.5, ya que por cada dos partículas que colisionan se forma una nueva partícula. El segundo sumando de la ecuación \ref{ec:colisionesintegrodiferencial} representa la pérdida de partículas de masa $m$ debida a las colisiones de partículas de masa $m$ con otras para formar partículas mayores. La ecuación \ref{ec:colisionesintegrodiferencial} no es única: en realidad es un sistema de ecuaciones. Además el término integral no es del todo apropiado ya que las partículas son discretas, por lo que habría que utilizar sumatorios \cite{friedlander:2000}.
+
+\begin{equation}
+\label{ec:colisionessumatorio}
+\dfrac{dn(m_k)}{dt}\,=\, \frac{1}{2} \sum_{\substack{i\,=\,1 \\ j\,=\,1}}^{i+j=k} K(m_i,m_j)n(m_i)n(m_j)-n(m_k)\sum_{i\,=\,1}^{i\,=\, \infty} K(n_m,m_i)n(m_i)
+\end{equation}
+
+Si se supone una frecuencia de colisiones constante, $K$, y un aerosol inicial monodisperso $n(t\,=\,0)$, la solución de la ecuación \ref{ec:colisionesintegrodiferencial} se reduce a:
+
+\begin{equation}
+\label{ec:solucioncolisiones}
+n(t)\,=\, \dfrac{n(t\,=\,0)}{1+n(t\,=\,0)Kt}
+\end{equation}
+
+\par Según la ecuación \ref{ec:solucioncolisiones} el número de partículas decrece conforme pasa el tiempo, haciendo que el tamaño de las partículas sea más grande.
+
+\par Para un aerosol polidisperso en el que se suponga que la frecuencia de colisiones sea constante, la ecuación \ref{ec:colisionesintegrodiferencial} tiene solución analítica, \cite{fuchs:1989}. En realidad la frecuencia de colisiones no es constante, sino que depende de la temperatura de las partículas, de la viscosidad dinámica del gas, y de otros muchos factores.
+
+\par Los otros fenómenos que producen colisiones entre partículas se modelan mediante una función de frecuencia de colisiones específica para caso de estudio, \cite{friedlander:2000}. Existen muchos autores que se han dedicado a modelar estas funciones de frecuencia de colisiones, \cite{kazakovetal:1998,kimetal:2001,kostoglouetal:2001}, etc.
+
+\par En cualquier caso, planteamientos como el descrito permiten predecir el crecimiento másico de las partículas, pero no dan información sobre la morfología de las mismas. Para esto, es necesario tener en cuenta que las colisiones pueden tener como consecuencia uniones muy diversas.
+
+\subsection{Tipos de uniones}
+
+\par Simultáneamente al proceso de crecimiento de las partículas primarias, e igualmente una vez terminado éste, las partículas están sometidas a movimientos microscópicos (comentados en el epígrafe \ref{sec:Movimientos}), que tienen como consecuencia frecuentes colisiones entre ellas. Las consecuencias de estas colisiones pueden ser diversas, en función de las condiciones ambientales en las que se encuentran las partículas primarias:
+
+\begin{itemize}
+
+\item Coagulación: dos partículas, por ejemplo esféricas, coagulan si como consecuencia de la colisión entre ellas y a causa de las condiciones ambientales de presión y temperatura elevadas, la partícula formada tiende a hacerse esférica y compacta, de manera que las dos partículas originarias pierden su identidad morfológica, \cite{heywood:1988}.
+
+\item Agregación: Se puede producir la unión de un número reducido de partículas con distribución de cargas asimétrica a través de fuerzas cohesivas atómicas o moleculares, \cite{heywood:1988}, produciendo agregados lineales de gran estabilidad.
+
+\item Aglomeración: Si en la colisión entre partículas primarias, éstas quedan unidas mediante fuerzas de cohesión débiles, como puede ser la tensión superficial, se forma una nueva partícula en la que la identidad morfológica de las partículas primogénitas no varía sustancialmente. La nueva partícula tiene una estabilidad pequeña.
+
+\item Aglomeración con compuestos orgánicos: es aquella aglomeración entre partículas primarias en la que existe un componente orgánico líquido que actúa de interfase o pegamento entre las partículas primarias, \cite{mikhailovetal:1996}.
+
+\end{itemize}
+
+\begin{figure}[ht]
+\centering
+	\includegraphics[width=0.6\textwidth]{UnionesParticulas.png}	 
+	\caption{Representación de los tipos de uniones entre partículas primarias} \label{fig:unionesparticulas}
+\end{figure} 
+
+\par En la Figura \ref{fig:unionesparticulas} se esquematizan los tipos de uniones que pueden resultar de las colisiones a las que se pueden ver sometidas las partículas primarias en cualquier punto de la cámara de combustión o en el tubo de escape. A pesar de esta distinción, las palabras ?agregación? y ?aglomeración? suelen utilizarse indistintamente al describirse los distintos regímenes de crecimiento -no superficial- de las partículas, y las características morfológicas de éstas.
+
+\par Posteriormente a las colisiones entre partículas primarias se pueden producir colisiones entre partículas primarias y aglomerados y/o colisiones entre aglomerados. Las colisiones entre partículas primarias y aglomerados se clasifican en los mismos tipos que las mostradas en la Figura \ref{fig:unionesparticulas}. Por otro lado las colisiones entre aglomerados provocan la formación de racimos cohesionados mediante fuerzas generalmente débiles, y donde la forma del aglomerado creado respeta la morfología de los aglomerados primogénitos.
+
+\par El enracimamiento modifica el tamaño y estructura de las partículas, así como su capacidad de adsorción, su aerodinámica y su comportamiento óptico.	
+\par En la cámara de combustión predominan las colisiones entre partículas primarias y entre pequeños agregados, aglomerados y partículas primarias, mientras que en el tubo de escape predomina el enracimamiento de aglomerados.
+ 
+\subsection{Tipos de aglomeración}\label{sub:tiposaglomeracion}
+\subsubsection{Introducción}
+
+\par La simulación de los procesos de aglomeración requiere conocer el comportamiento espacial que tienen los aglomerados y cómo van formando aglomerados mayores y por tanto desapareciendo los de menor tamaño. Las hipótesis que hay que tener en cuenta se deben por un lado al propio movimiento de los aglomerados y por otro lado las debidas al propio proceso de colisión. El movimiento del aglomerado en el fluido requiere del estudio de toda la fluidodinámica de la partícula en el seno del fluido, cuestión que no se trata en esta tesis. Los tipos de colisiones que se pueden dar entre los aglomerados, aparte de la coagulación y la agregación, los resume P. Meakin et al \cite{meakinetal:1989}, y son:
+
+\begin{itemize}
+\item Aglomeración limitada por difusión.
+\item Aglomeración balística.
+\item Aglomeración limitada por reacción.
+\end{itemize}
+
+\par Los tres tipos de aglomeraciones anteriores a su vez se subdividen en dos, aglomeración partícula-racimo y aglomeración racimo-racimo, de manera que existen 6 formas distintas de formación de aglomerados.
+
+\par Cuando las partículas son muestreadas en el tubo de escape (lejos ya de la zona de reacción), la estructura que presentan puede ser debida a aglomeración balística o a aglomeración limitada por difusión, dependiendo de la temperatura del gas de escape, del recorrido libre medio entre partículas y del tamaño de éstas, \cite{skillasetal:1998}, y por tanto de las condiciones de operación del motor.
+
+\subsubsection{Aglomeración limitada por difusión} \label{subsub:Aglomeracionlimitadadifusion}
+
+\par La aglomeración limitada por difusión es la denominada DLA (\textit{Diffusion-Limited Aggregation} o \textit{Agglomeration}). Si el camino libre medio entre los aglomerados o entre el aglomerado y la partícula primaria es pequeño frente al tamaño de las partículas, entonces la colisión entre las partículas es poco energética. En este caso las partículas se unen por uno o varios puntos de contacto sin perder su forma original. El contacto se produce por movimiento difusivo, básicamente. Si la aglomeración es del tipo partícula-racimo, entonces se demuestra que el aglomerado resultante tiende a una formación simétrica respecto a su centro de gravedad, de manera que las partículas se van aglomerando al racimo original de forma radial. El racimo crece simétricamente, tomando una forma de esfera porosa. Se demuestra que la dimensión fractal, que se define más adelante, tiende a 2.5, \cite{friedlander:2000}. 
+
+\par El otro caso es el de colisión entre dos racimos cualesquiera que se denomina DLCA (\textit{Diffusion-Limited Cluster Aggregation} o \textit{Agglomeration}). En este caso los racimos recorren un camino aleatorio antes de colisionar, de manera que colisionan por uno o varios puntos. Después de la colisión los racimos originales permanecen inalterables en forma. Con este tipo de colisiones se consiguen aglomerados muy enracimados tendiendo a estructuras con forma de cadenas. La dimensión fractal media tiende a 1.8, \cite{megaridisetal:1990}.
+
+\subsubsection{Aglomeración balística}
+
+\par En el proceso de colisión balística, el camino libre medio entre las partículas que colisionan es muy grande respecto al tamaño de ambas partículas. Por ello, la energía cinética de las partículas es muy grande en el momento de la colisión. Este tipo de aglomeración es caracterizada porque las trayectorias trazadas por las partículas son muy rectilíneas, a diferencia de las colisiones DLA, en las que las trayectorias son de tipo aleatorio.
+
+\par Si la aglomeración es entre una partícula primaria y un racimo, entonces la partícula primaria impacta contra el racimo introduciéndose dentro de él, ya que la energía cinética es elevada en el momento del impacto. El aglomerado tiende a ser una esfera más compacta, de manera que la dimensión fractal tiende a 3.0. 
+
+\par Si la aglomeración se produce entre dos racimos, entonces se incrustan uno en otro produciendo un aglomerado de tipo cadena con una dimensión fractal superior que en el caso de una aglomeración de tipo DLA. En este caso la dimensión fractal tiende a 1.95, \cite{megaridisetal:1990}.
+
+\subsubsection{Aglomeración limitada por reacción}
+
+\par En los dos casos anteriores todas las colisiones producen un aglomerado de mayor dimensión, desapareciendo los dos aglomerados originales. En este caso, RLA (Reaction Limited Aggregation o Agglomeration), para que se forme un aglomerado nuevo, los dos aglomerados originales, además de contactar, deben superar alguna fuerza exterior, como puede ser la debida a cargas eléctricas ó potenciales químicos. De esta manera, para que dos aglomerados colisionen, la energía de colisión tiene que ser superior que en los dos casos anteriores. Si la aglomeración es entre una partícula primaria y un racimo, el aglomerado resultante tiende a ser una esfera compacta, cuya dimensión fractal tiende a 3.0. En el caso de aglomeración entre dos racimos, la dimensión fractal tiende a ser superior a 2.0, según P. Meakin et al \cite{meakinetal:1989} la dimensión fractal tiende a 2.09.
+
+\subsection{Reestructuracion térmica del aglomerado}
+
+\par La reestructuración térmica de las partículas depende del nivel térmico inicial y de la velocidad de enfriamiento. El nivel térmico inicial afecta directamente a la reestructuración térmica. Cuanto mayor sea el nivel térmico inicial mayor será la reestructuración térmica de las partículas. Por otro lado, la velocidad de enfriamiento afecta inversamente a la reestructuración térmica. Cuanto mayor es la velocidad de enfriamiento, menor es el tiempo de residencia a alta temperatura, y como consecuencia menor es la posibilidad de que exista reestructuración térmica.
+
+\par Dependiendo de la estructura interna del aglomerado, la reestructuración térmica puede afectar a las partículas de dos maneras distintas:
+
+\begin{itemize}
+\item Si las partículas primarias que componen el agregado o aglomerado están fuertemente unidas unas a otras, pueden conservar durante su exposición a las altas temperaturas su tamaño medio, caso nº 1 de la Figura \ref{fig:reestructuraciontermica}. En este caso, el tamaño y la forma estructural del agregado tienden a conservarse, mientras que los tamaños medios de las partículas primarias aumentan debido al crecimiento superficial de las partículas primarias, \cite{sempereetal:1993}. Como consecuencia la dimensión fractal tiende a aumentar.
+
+\item Si las partículas primarias que conforman el aglomerado están unidas mediante fuerzas débiles, la exposición a las altas temperaturas puede llevar consigo una reestructuración del aglomerado haciendo que se vuelva más compacto y por tanto aumente su dimensión fractal, \cite{stasio:2001}, \cite{dalisetal:2005}. En este caso, existe reestructuración morfológica sin necesidad de que las partículas primarias sufran crecimiento superficial, ya que éstas varían su posición interna en el aglomerado, \cite{schmidt:1988,liuetal:2004}. Esta reestructuración se muestra en el caso nº 2 de la Figura \ref{fig:reestructuraciontermica}.
+
+\end{itemize}
+
+\begin{figure}[ht]
+\centering
+	\includegraphics[width=0.6\textwidth]{ReestructuracionTermica.png}	 
+	\caption[Tipos de reestructuración térmica de los aglomerados]{Tipos de reestructuración térmica de los aglomerados.Los subíndices 1 y 2 indican los estados previo y posterior a la reestructuración térmica} \label{fig:reestructuraciontermica}
+\end{figure} 
+
+\par El primer tipo de reestructuración térmica puede suceder dentro de la cámara de combustión donde la elevada temperatura favorece la fusión de pequeñas partículas sobre la superficie de los aglomerados. El segundo tipo de reestructuración térmica se puede dar, tanto en la cámara de combustión como en el tubo de escape, si bien es el tipo de reestructuración que predomina en el tubo de escape.
+\par En ambos casos, la reestructuración térmica lleva consigo un cambio en la anisotropía y en el área proyectada de los aglomerados, ya que varía la conformación geométrica de los mismos, \cite{mikhailovetal:1996}.
+\par Por otra parte, dependiendo de la forma del aglomerado y del tamaño de las partículas primarias que lo componen, la velocidad de enfriamiento de la partícula varía, ya que ésta depende principalmente de su área superficial, \cite{liuetal:2004}.
+ 
+\section{Diámetros Equivalentes y Funciones de Distribución}\label{sec:diametrosyfuncionesequivalentes}
+
+\subsection{Diámetros Equivalentes} \label{sub:diametros}
+
+\par Se puede definir el diámetro equivalente de una partícula como el diámetro de la esfera que tendría el mismo valor de una propiedad física particular que la partícula irregular considerada. De esta manera, en función de la propiedad física fijada se define el diámetro equivalente considerado, \cite{friedlander:2000}.
+
+\par En el esquema de la Figura \ref{fig:propiedadesparticulas} se presentan algunas propiedades físicas de las partículas relacionadas con el diámetro junto con el rango de tamaños en el que tal medida es posible o en el que se mantiene tal relación.
+
+\par Se muestra en la Figura \ref{fig:propiedadesparticulas} que la resistencia del medio al movimiento de las partículas, la velocidad de evaporación y la velocidad de enfriamiento son proporcionales al cuadrado del tamaño de las partículas, si éstas son del orden de pocos nanómetros, \cite{fuchs:1989}. En cambio, estas propiedades físicas son proporcionales al tamaño de las partículas cuando éstas tienen un tamaño del orden de micrómetros. La frecuencia de colisiones con coagulación tiene su máximo cuando las partículas tienen un tamaño del orden de pocos nanómetros. La dispersión de luz por las partículas es proporcional al tamaño de éstas elevado a la sexta potencia, si el tamaño de las partículas es de pocos nanómetros. En cambio, si el tamaño de las partículas es del orden de micrómetros, la dispersión de luz es proporcional al cuadrado del tamaño de las mismas, \cite{fuchs:1989}.
+
+\par También se muestra en la Figura \ref{fig:propiedadesparticulas} la región de visibilidad microscópica, por medio de microscopios ópticos, que está en el orden de micrómetros, y la región de visibilidad ultramicroscópicas, por medio de microscópicos electrónicos, que puede incluso llegar a pocos nanómetros. Por último, se muestra en la Figura \ref{fig:propiedadesparticulas} que el movimiento de partículas con tamaños de pocos nanómetros es predominantemente difusivo, mientras que el movimiento de partículas con tamaños del orden de micrómetros es predominantemente convectivo o de sedimentación.
+
+\begin{figure}[ht]
+\centering
+	\includegraphics[width=0.9\textwidth]{PropiedadesParticulas.png}	 
+	\caption{Algunas propiedades de las partículas en relación a su tamaño} \label{fig:propiedadesparticulas}
+\end{figure} 
+
+\par Normalmente las propiedades físicas de las partículas irregulares son muy difíciles de medir, y dependiendo de la propiedad física y con la tecnología actual, incluso pueden ser imposibles de medir. Por lo tanto, los diámetros equivalentes que se suelen definir son los que se pueden medir experimentalmente.
+
+\par El diámetro aerodinámico es uno de los más comunes. Se define como aquel diámetro que tiene una partícula esférica de densidad unitaria, 1 $gcm^{-3}$, cuya velocidad de sedimentación o deposición es igual a la partícula irregular en cuestión. El diámetro aerodinámico se mide en ciclones e impactadores, \cite{smekensetal:1997}. Esta definición de diámetro no tiene en cuenta las trayectorias de las partículas, de manera que para partículas muy pequeñas las trayectorias pueden ser muy irregulares o incluso caóticas. Para este tipo de partículas el movimiento se caracteriza por ser predominantemente difusivo, Figura \ref{fig:propiedadesparticulas}. 
+
+\par Se define diámetro equivalente de Stokes como el de una partícula esférica que tiene la misma resistencia aerodinámica que la partícula irregular si la partícula tiene una velocidad diferente a la del fluido portador, \cite{hinds:1982}. El diámetro equivalente de Stokes no depende de la densidad de la partícula, ya que la resistencia aerodinámica depende de la densidad del fluido, del coeficiente aerodinámico, del área frontal de la partícula y de la velocidad relativa entre la partícula y el fluido.
+
+\par Se define el diámetro equivalente de movilidad eléctrica como el diámetro de una esfera con igual diámetro de Stokes que la partícula irregular y que además tenga la misma carga eléctrica. De esta manera, partículas con diámetros de Stokes iguales y que además lleven idéntica carga eléctrica, tienen igual movilidad eléctrica. El diámetro de movilidad eléctrica se puede medir experimentalmente con un SMPS (Scanning Mobility Particle Sizer), \cite{vangulijketal:2004}.
+
+\par Las partículas de igual diámetro de Stokes que llevan idéntica carga eléctrica, tienen la misma movilidad eléctrica. Si además el campo eléctrico es unitario, el diámetro de Stokes y el diámetro equivalente de movilidad eléctrica se igualan.
+
+\par El diámetro de giro es el diámetro de un anillo toroidal que tiene la misma inercia que la que tiene la partícula irregular. La ventaja de utilizar esta definición de diámetro característico radica en que es un parámetro puramente geométrico que sólo depende de la posición espacial de las partículas primarias que componen el aglomerado. Otros autores como K.H. Naumann \cite{naumann:2003} lo denominan diámetro geométrico de la partícula irregular.
+
+\par El diámetro másico equivalente es el diámetro de una esfera que tiene la misma masa que la partícula irregular, \cite{naumann:2003}. Este diámetro es muy difícil de medir directamente, por lo que se determina a partir de otras variables como el diámetro de giro.
+
+\par El diámetro del volumen equivalente es el diámetro de una esfera que tiene el mismo volumen que la partícula irregular, \cite{parketal:2003}.
+
+\par El diámetro de proyección equivalente es el diámetro de una esfera que tiene el mismo área proyectada que la partícula irregular, \cite{whitby:1978}. 
+
+\subsection{Funciones de Distribución}\label{subsec:funcionesdistribucion}
+
+\par El hollín en el gas de escape de un motor diésel es un aerosol polidisperso, es decir, cubre un amplio rango de tamaños de partículas. La función que caracteriza el número de partículas que tienen un determinado tamaño se denomina función de distribución de tamaños. 
+La clasificación modal propuesta por K.T. Whitby \cite{whitby:1978} es la más utilizada para clasificar las partículas del aerosol atmosférico. La clasificación modal se resume en la Figura \ref{fig:distribuciontipicaparticulas} La línea continua indica la concentración de partículas en el gas de escape en número, y la línea discontinua indica la concentración másica de las partículas diésel.
+
+\par Como se muestra en la Figura 2.6 las funciones de distribución siguen funciones del tipo logarítmico-normales presentando normalmente tres modas. Las tres modas son la moda núcleos, acumulación y gruesa, \cite{kittlesonetal:1998}. La moda núcleos está comprendida entre pocos nanómetros, 5 nm, a 50 nm, aproximadamente. La moda acumulación está comprendida entre 50 nm y 1000 nm, mientras que la moda gruesa son partículas mayores a 1000 nm.
+
+\par La función de distribución logarítmico-normal corresponde con la siguiente expresión, tomada de \cite{friedlander:2000}:
+
+\begin{equation}
+\label{ec:distribucionlogaritmico-normal}
+f(d_p)\,=\,\dfrac{1}{\sqrt{2 \pi} d_p ln(\sigma)} exp\left( -\dfrac{1}{2 ln^2 \sigma} \left( lnd_p - ln \overline{\overline{d_p}} \right)^2 \right)
+\end{equation}
+
+donde $\sigma$ es la desviación estándar geométrica y $\overline{\overline{d_p}}$ es el diámetro medio geométrico de la función de distribución. La desviación típica geométrica y el diámetro medio geométrico se calculan mediante las siguientes ecuaciones:
+
+\begin{align}
+\label{ec:desviaciontipicageometrica}
+ln(\overline{\overline{d_p}}\, & =\,\overline{lnd_p}\,=\,\int_0^\infty lnd_p f(d_p) dd_p \\
+\label{ec:diametromediogeometrico}
+ln^2 \sigma\, & =\,\overline{\left(ln d_p - ln \overline{\overline{d_p}} \right)^2}\,=\, \int_0^\infty \left( lnd_p - ln \overline{\overline{d_p}} \right)^2 f(d_p)dd_p
+\end{align}
+
+\par Este diámetro se puede asociar a cualquiera de las definiciones que se han presentado en el epígrafe \ref{sub:diametros}.
+
+\par Otra función de distribución utilizada es la logarítmico-normal bimodal, que recoge las modas nuclear y acumulativa por medio de una sola función \cite{kazakovetal:1998},
+
+\begin{equation}
+\label{ec:logartimico-normalbimodal}
+f(d_p)\,=\,\dfrac{1}{3\sqrt{2} \pi d_p}\left[ \dfrac{a}{ln \sigma_1} exp\left( - \dfrac{\left( lnd_p - ln \overline{\overline{d_{pl}}} \right)^2}{18ln^2 \sigma_1} \right)  + \dfrac{1-a}{ln \sigma_2}exp\left( - \dfrac{\left( lnd_p - ln \overline{\overline{d_{p2}}} \right)^2}{18ln^2 \sigma_2} \right) \right]
+\end{equation}
+
+donde los subíndices 1 y 2 representan las dos modas y $a$ es un parámetro de ajuste que expresa la separación entre las dos modas.
+
+\section{Efectos mediambientales y fisiológicos}
+\subsection{Introducción}
+\par La emisión de partículas constituye uno de los mayores problemas medioambientales atribuidos a los motores diésel. El trabajo europeo APHEIS \cite{apheis:2004}, recientemente, ha cuantificado los efectos de la emisión de partículas diésel sobre la salud, en términos de mortalidad prematura y de ingresos en los hospitales. Adicionalmente, la absorción de radiación por las partículas de hollín en todo el rango de longitudes de onda de la radiación solar es conocido y además influye apreciablemente en el clima, \cite{sorensen:2001}.
+
+\par Se sabe que la irregularidad de la partícula diésel afecta directamente al impacto medioambiental y a la salud pública por varias razones:
+ 
+\begin{itemize}
+\item Cuanto más irregulares son las partículas mayor es la relación entre el área superficial y el volumen, haciendo que aumente la capacidad de absorción de hidrocarburos. 
+
+\item La irregularidad de las partículas afecta directamente a la capacidad que tienen éstas de extinguir la radiación luminosa incidente sobre ellas, por lo que afecta a la opacidad del gas portador de las partículas, haciendo que ésta aumente.
+
+\item La irregularidad de las partículas afecta al comportamiento aerodinámico de éstas, ralentizando su velocidad de sedimentación y aumentando, por tanto, su probabilidad de entrar en las vías respiratorias humanas.
+
+\item La irregularidad de las partículas aumenta la eficiencia de filtrado de los sistemas de retención de partículas tanto artificiales como las propias del cuerpo humano, \cite{bockhornetal:2002}. Concretamente tiene especial interés el conocimiento de la morfología de las partículas para el diseño de los sistemas de postratamiento de los gases de escape del motor diésel (Trampas de partículas).
+
+\end{itemize}
+
+Otros efectos asociados a la irregularidad de las partículas diésel son los referentes a las propiedades del transporte, como son la difusión energética y de cantidad de movimiento, y las propiedades de radiación de calor, etc. \cite{meakinetal:1989}. 
+La manera más común de cuantificar la irregularidad de las partículas es mediante la dimensión fractal, como se explica en B.B. Mandelbrot \cite{mandelbrot:1983}. Algunos autores como R.J. Samson et al \cite{samsometal:1987}, C. Van Gulijk et al \cite{vangulijketal:2004}, A.V. Filippov et al \cite{filippovetal:2000}, K.O. Lee et al \cite{leeetal:2003}, han utilizado esta manera de cuantificar la irregularidad para muchos ejemplos de gran interés práctico.
+
+\subsection{Parámetros para caracterizar emisiones} \label{sub:parametroscaracterizaremisiones}
+
+\subsubsection{Índice de emisión}
+
+\par El índice de emisión para la especie contaminante $i$ es la relación entre la masa de dicha especie y la masa de combustible quemado por el proceso de combustión.
+
+\begin{equation}
+\label{ec:indiceemision}
+EI_i\,=\, \dfrac{m_i}{m_f}
+\end{equation}
+
+\par Como se puede observar, el índice de emisión es adimensional. Sin embargo, para valores muy pequeños de dicho índice, suelen utilizarse unidades como, por ejemplo, $g/kg$. Este índice es muy útil en el sentido en que no da lugar a ambigüedad en su interpretación ya que expresa la cantidad de contaminante formado por masa de combustible consumido, independientemente del grado de dilución de los productos o de la eficiencia de la combustión.
+
+\par En la combustión de un hidrocarburo con aire, el índice de emisión puede ser calculado a partir de la medida de las concentraciones de las especies de interés junto con todas aquellas especies que contienen carbono. Asumiendo que todo el carbono del combustible aparece como $CO$ y $CO_2$ en los productos de la combustión, se puede escribir la ecuación \ref{ec:indicecombustiontotal}
+
+\begin{equation}
+\label{ec:indicecombustiontotal}
+EI_i\,=\,\left( \dfrac{X_i}{X_{CO}+XO_{CO_2}} \right) \left( \dfrac{nPM_i}{PM_f} \right)
+\end{equation}
+
+donde X son las fracciones molares, n es el número de átomos de carbono en un mol de combustible CnHm y PMi y PMf son los pesos moleculares de la especie i y del combustible respectivamente. El primer término de la ecuación (15.2) representa el número de moles de i por mol de carbono del combustible, mientras que el segundo término permite la conversión de moles de carbono a moles de combustible y su respectiva conversión a unidades másicas. 
+
+\par En un proceso de combustión de una mezcla pobre (condiciones de trabajo con exceso de aire), en el cual las cantidades de $CO$, $H_2$, y otras especies contaminantes, sean muy pequeñas, la combustión de un mol de combustible con aire (suponiendo que el aire es una mezcla con un 21\% de $O_2$ y un 79\% en volumen de $N_2$) se puede expresar como se muestra en :
+
+\begin{equation}
+\label{ec:combustionpobre}
+C_nH_mO_p + aO_2 +3.76aN_2 \rightarrow nCO_2+ \left( \dfrac{m}{2} \right)H_2O+aO_2+3.76aN_2
+\end{equation}
+
+\par La fracción molar para la especie $i$ se define como: 
+
+\begin{equation}
+\label{ec:fraccionmolar}
+X_i\,=\, \dfrac{n_i}{n_t}\,=\, \dfrac{n_i}{n_{CO_2}+n_{H_2O}+n_{N_{2(a)}}}\,=\, \dfrac{n_i}{n+\frac{n}{2}+3.76aN_2}
+\end{equation}
+
+\par Es importante señalar que la relación anterior se refiere a un proceso de combustión con mezcla pobre (exceso de aire). Para mezclas ricas, la situación es más complicada debido a que las cantidades de monóxido de carbono y de hidrógeno molecular son mucho más importantes y, por lo tanto, se han de contabilizar en los moles totales de productos de la combustión. De forma general, se puede escribir que:
+
+\begin{equation}
+\label{ec:fraccionmolargeneral}
+X_i\,=\, \dfrac{n_i}{n_t}
+\end{equation}
+
+\subsubsection{Medidas típicas de emisiones}
+\par Los niveles de emisión pueden expresarse de distintas formas que a veces pueden dar lugar a comparaciones dificultosas y ambiguas. Estas diferencias tienen su origen en las necesidades de las distintas tecnologías \cite{turns:1996}. En vehículos pesados diésel y de gasolina, resulta común expresar las emisiones en función de la potencia efectiva suministrada por los mismos (emisión específica) como:
+
+\begin{equation}
+\label{ec:emisionespecifica}
+EE_i\,=\, \dfrac{\dot{m_i}}{N_e}
+\end{equation}
+
+En esta expresión \ref{ec:emisionespecifica} las unidades normalmente utilizadas son $g/kWh$. La emisión específica está relacionada con el índice de emisión (EI) por la siguiente ecuación: 
+
+\begin{equation}
+\label{ec:EI}
+EE_i\,=\, \dfrac{\dot{m_i}}{N_e}\,=\, \dfrac{\dot{m_f}EI_i}{N_e}
+\end{equation}
+
+\par Otra medida de las emisiones frecuentemente empleada es la masa de contaminante emitida por unidad de energía liberada por el combustible \ref{ec:masaemitida}, donde PCI es el poder calorífico del combustible:
+
+\begin{equation}
+\label{ec:masaemitida}
+\dfrac{\dot{m_i}}{Q_{lib}}\,=\, \dfrac{EI_i}{PCI}
+\end{equation}
+
+\par Las unidades usuales son $g/MJ$. 
+
+\par En vehículos ligeros, suele usarse la cantidad de contaminante emitida por la distancia recorrida por el vehículo (g/km). Sin embargo, para procesos de homologación, la medida viene dada en g/ciclo de homologación. 
+
+\par En muchas ocasiones resulta ventajoso expresar las emisiones en unidades adimensionales. Las unidades más comúnmente utilizadas son el tanto por uno o tanto por ciento, las partes por millón (bien en masa o bien en volumen, siendo el factor de conversión de una a la otra el peso molecular) y si las cantidades emitidas son muy pequeñas, en partes por billón (que también pueden referirse a la masa o al volumen). Si las emisiones son gaseosas, lo más habitual es que dichas unidades se refieran a relaciones volumétricas, coincidiendo entonces con las relaciones molares.
+
+\par En resumen, se pude afirmar que la medida utilizada depende cual sea la aplicación específica del proceso. 
+
+\subsection{Efectos sobre la salud pública}
+
+\par Durante la respiración humana no sólo se inhala oxígeno, nitrógeno y el resto de gases que componen el aire, sino que además entran en las vías respiratorias todas las partículas que están en suspensión en el aire. Las partículas con diámetros menores a $2.5 \mu m$ se llaman partículas finas y tienen una deposición alveolar pequeña ya que son interceptadas o filtradas con anterioridad en la parte bronquial. El problema está con las partículas ultrafinas, de tamaño inferior a 100 nm, que sí llegan a la región alveolar y además la tasa de deposición alveolar es muy elevada, \cite{leeetal:2003}, como puede verse en la Figura \ref{fig:deposicionalveolar}.
+
+\begin{figure}[ht]
+\centering
+	\includegraphics[width=0.9\textwidth]{DeposicionAlveolar.png}	 
+	\caption{Deposición alveolar de las partículas diésel en función de su tamaño, adaptado de D.B. Kittelson \cite{kittleson:1998} y de J.M. Desantes et al \cite{desantesetal:2005}.} \label{fig:deposicionalveolar}
+\end{figure} 
+
+\par El problema de la deposición alveolar de las partículas ultrafinas, se agrava por la mayor concentración de éstas en el aire. Los motores diésel actuales producen mayor número de partículas ultrafinas que sus predecesores, si bien no existen correlaciones evidentes entre el tipo de motor diésel y su antigüedad con el tipo de partículas emitidas, \cite{morawskaetal:1998}.
+
+\par El humo producido por los motores diésel tiene menor tasa de deposición en los pulmones que el producido por el tabaco y que el producido por los motores de gasolina, \cite{morawskaetal:1998}. Este estudio experimental comprobó que la tasa de deposición del humo de un motor diésel sobre los pulmones es del 30\%, frente a la del humo del tabaco que es del 36\% y la del humo de un motor de gasolina, que es del 41\%. Estas cifras no son directamente proporcionales a los tamaños medios de movilidad de las partículas que son para el humo del tabaco de 183 nm, para el humo de un motor diésel de 125 nm y para el humo de un motor de gasolina de 69 nm. Tampoco son iguales las tendencias de la tasa de deposición pulmonar al variar el tamaño de las partículas: por ejemplo, la tasa de deposición del humo de tabaco apenas se ve afectada por el tamaño de las partículas, mientras las de los humos de los motores disminuyen al aumentar los tamaños. Los autores atribuyen tales diferencias precisamente a la diferente morfología de las partículas y de las unidades esféricas que las componen (mucho mayores en el caso del humo del tabaco), y señalan mecanismos como la deposición en bifurcaciones bronquiales, que afectan mucho más a las estructuras enracimadas que a las compactas, como puede comprobarse en la Figura \ref{fig:comparativafotos}.
+  
+\begin{figure}[ht]
+\centering
+	 \subfloat[Fotografía de un aglomerado diésel típico]{\label{subfig:particuladiesel}\includegraphics[scale=0.9]{Fotoparticuladieseltipica.png}}
+	 \qquad
+	 \subfloat[Fotografía de una partícula de humo de tabaco]{\label{subfig:particulahumotabaco}\includegraphics[scale=0.9]{Fotohumotabaco.png}}
+	 \caption{Fotografía de una partícula diésel típica \ref{subfig:particuladiesel}. Fotografía de una partícula perteneciente al humo del tabaco\ref{subfig:particulahumotabaco}}
+\end{figure} \label{fig:comparativafotos}
+
+\par Otros efectos que pueden producir las partículas sobre la salud humana son los derivados de la propia naturaleza de estas partículas y de los distintos compuestos químicos que pueden llevar absorbidos en su superficie. G. Oberdörster \cite{oberdoster:2001} y A. Seaton et al \cite{seatonetal:1995} constataron que la inhalación de partículas lleva consigo la inflamación de las vías respiratorias, provocando un considerable daño en las mismas y en el sistema cardiovascular. La parte soluble de la partícula puede traspasar la membrana alveolar pasando a la sangre y distribuyendo su toxicidad por todo el cuerpo, mientras que la parte insoluble se queda alojada en las vías respiratorias, disminuyendo, por tanto la capacidad respiratoria. Por otro lado las partículas están compuestas por PAH (Polycyclic Aromatic Hydrocarbons) que son compuestos cancerígenos, \cite{benneretal:1990}. Todos estos efectos son, por tanto, consecuencia indirecta de la morfología de las partículas, en la medida en que ésta influye decisivamente sobre la probabilidad de inhalación de las mismas, y sobre la capacidad de absorción de sustancias tóxicas.
+
+\subsection{Impacto medioambiental}
+
+\par El impacto medioambiental de las partículas diésel es muy diverso. Las partículas juegan un papel muy importante en la contaminación ambiental y pueden tener un posible efecto sobre el cambio climático, \cite{przybiolla:2002}, \cite{petterssonetal:2004} y \cite{chameidesetal:2002}.
+
+\par Las nubes son pequeñas gotas de agua formadas a partir de la condensación del vapor de agua alrededor de un núcleo ya condensado. Las partículas en suspensión son base o núcleos alrededor de los cuáles puede condensar vapor de agua, promoviendo la formación de nubes con consecuencias climáticas adversas, \cite{zhangetal:2006}. El hollín en suspensión incrementa la dispersión y la absorción de la radiación solar, \cite{ackermanetal:2000}, y reduce la radiación solar que incide sobre la superficie terrestre, afectando por consiguiente el clima terrestre, \cite{menonetal:2002}. Además, puede alterarse la estructura térmica de la atmósfera, reduciendo la probabilidad de lluvias y haciendo, por tanto, menos eficiente la eliminación de contaminantes de la atmósfera, \cite{ramanathanetal:2001}.
+
+\par Existe un fenómeno llamado gravito-fotofóresis por el cuál las partículas tienden a subir en la atmósfera hasta alcanzar alturas desde 20 km hasta 83 km, \cite{cheremisinetal:2005}. De esta forma, las partículas quedan suspendidas en la atmósfera según su tamaño. Las más pequeñas quedan en capas superiores y las de tamaño entorno al micrómetro, en capas más bajas de la atmósfera. La presencia de estas capas aumenta tanto la reflexión de la luz solar incidente sobre el planeta, como la dispersión de luz. Al margen de la consecuente disminución de visibilidad, este efecto puede ser tan grande que puede disminuir el flujo neto de energía solar que llega a la corteza terrestre, \cite{faxvogetal:1978}, provocando un enfriamiento en ésta, opuesto al efecto invernadero. Este efecto es más intenso cuanto mayor es la emisividad de la superficie terrestre. Por el contrario, cuando la superficie terrestre es brillante, las capas de partículas dificultan la reflexión provocando un efecto similar y potenciando el efecto invernadero. Coincide, además, que la potenciación del efecto invernadero tiene lugar en zonas más cálidas y desérticas (con superficies más reflectantes) y el enfriamiento superficial, en las zonas más frías y húmedas (por lo general más absorbente). En cualquiera de los dos casos el carácter regional o zonal de este efecto, frente al global del efecto invernadero hace que, más que mitigar o potenciar éste, el efecto más notable de la presencia de las capas de partículas sea el de dificultar la observación del efecto invernadero. El comportamiento óptico de las partículas, responsable de los fenómenos descritos, depende mucho del tamaño y de la irregularidad de las partículas y de la posible presencia en su superficie de hidrocarburos condensados, \cite{siegmannetal:1999}.
+
+\par Por otra parte, las partículas son portadoras de sustancias que pueden reaccionar con los distintos gases de la atmósfera o que pueden catalizar reacciones no deseadas en el ambiente, \cite{merolaetal:2001}. Por ejemplo las partículas de hollín pueden contener $SO_2$, el cual puede reaccionar con el agua y producir ácido sulfúrico. El ácido sulfúrico es arrastrado por la lluvia haciendo que ésta sea muy corrosiva, lo que se denomina lluvia ácida.
+
+\par El impacto medioambiental de las partículas diésel depende directamente de la concentración, de la irregularidad, del tamaño y de la eficiencia a la extinción de luz de las partículas que estén en suspensión en el ambiente. El tiempo medio de residencia en suspensión es mayor cuanto mayor es la irregularidad de las partículas y cuanto menor es el tamaño de éstas, por lo que cuanto mayor es la irregularidad de las partículas y menor el tamaño de éstas, mayor es el impacto medioambiental de las partículas diésel. Igualmente, cuanto mayor es la eficiencia a la extinción de luz de las partículas menor es la visibilidad y mayor es el impacto medioambiental, en cualquiera de las dos formas mencionadas. 
+ 
+\newpage
+\bibliographystyle{Config/ealpha}		
+\bibliography{Chapters/Bibliografia}

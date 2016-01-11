@@ -1,0 +1,24 @@
+% Customization of per chapter TOC    
+%\titlecontents{section}[1pt]{\vspace{.1\baselineskip}\bfseries}
+%{\thecontentslabel\hspace{2.8mm}}{\rule{\linewidth}{1.5pt}\\}
+%{\hspace{.5em}\titlerule*[10pt]{$\cdot$}\contentspage}
+
+
+%\dominitoc        % que cada capítulo tenga su ToC (necesita el paquete "minitoc" antes mencionado)
+\tableofcontents  % insertar ToC en este punto
+
+% Add a List of Figures
+\newpage{\pagestyle{empty}\cleardoublepage}
+\listoffigures
+
+% Add a List Of Tables
+\newpage{\pagestyle{empty}\cleardoublepage}
+\listoftables
+
+% Adds the Nomenclature
+\newpage{\pagestyle{empty}\cleardoublepage}
+\printnomenclature
+
+\cleardoublepage
+
+

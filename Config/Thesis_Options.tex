@@ -1,0 +1,255 @@
+%=====================================PACKAGES=====================================
+% Allows to change several parameters from headers and footers
+\usepackage{fancyhdr}
+
+% Allows to change space between lines
+\usepackage{setspace}          
+
+% Allows tables to occupy several pages
+\usepackage{longtable}         
+
+% Landscape command is in the following package
+\usepackage{lscape} 
+
+% Packet geometry to design document
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm,footskip=1cm]{geometry}
+\parindent = 5mm		% Sangría
+
+% fixltx2e allows for the use of subscripts and superscripts inside the text
+\usepackage{fixltx2e}           
+
+% Commands relative to color
+% color: Package to use color
+% usenames, dvipsnames and svgnames give access to a lot of colors
+% table is for including color in tables
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+% Package to change color to references (taken from: http://tex.stackexchange.com/questions/197293/change-the-color-of-cite-number-in-bibliography)
+\usepackage{xpatch}
+
+% Allows to rotate PSs and EPSs
+\usepackage{rotating}          
+
+% Euro symbol
+\usepackage{textcomp}          %
+
+% Allows to include several TOC in every chapter
+%\usepackage[spanish]{minitoc}           
+\usepackage{titletoc}
+
+% Manipulations for EPSs
+\usepackage{epsf}            
+
+% This is useful for the frontpage (arbitrary text positioning)
+\usepackage[absolute]{textpos} 
+
+% Spanish support and encondig (two following packages)
+\usepackage[main=spanish, english]{babel}   
+\usepackage[utf8]{inputenc} 
+
+% Standard package for selecting font encodings
+\usepackage[T1]{fontenc}
+
+% Fonts to typeset mathematics to match Palatino
+\usepackage{mathpazo}		% Defines Mathpatho font
+\linespread{1.05}         	% Palatino needs more leading (space between lines)
+
+% makeidx creates an index
+\usepackage{makeidx}
+
+% nomencl creates a nomenclature
+% intoc: Puts the nomenclature in the TOC
+% spanish: For Spanish Language
+\usepackage[intoc,spanish]{nomencl}
+% glossaries is more up to date than nomencl
+%\usepackage[xindy,nonumberlist,toc,nopostdot,style=altlist,nogroupskip]{glossaries}
+
+% Graphics inclusion, support for \figure (see below)
+\usepackage{graphicx} 
+
+% subfig package allows for sub-floats (figures, tables) to be separately captioned, referenced and included in a list-of-floats page
+\usepackage{subfig}
+
+% For the bibliography (natbib allows for multiple bibliographies in one document)
+\usepackage[sort&compress,super,comma, square, sectionbib]{natbib}
+\usepackage{chapterbib}
+
+% Integrating notes into the bibliography
+\usepackage{notes2bib}
+
+% Enhanced multiple citations
+\usepackage{mciteplus}
+
+% cite package allows as to manipulate how cites are formed. This package is not compatible with biblatex
+\usepackage{cite}
+
+% Use aditional symbols (AMS)
+\usepackage{amsmath,amssymb,amsfonts,latexsym}
+
+% Extension of the keyval package
+\usepackage{xkeyval}
+
+% Enumerate with redefinable labels
+\usepackage{enumerate}
+
+% lettrine used capital letter
+\usepackage{lettrine}
+
+% Define the name of Tables
+\usepackage[format=plain,justification=centerlast,width=15cm,labelsep=period,tablename=Tabla,skip=5pt]{caption}
+
+% appendix allows for more control over the appendixes format
+\usepackage{appendix}
+
+% Add bibliography/index/contents to Table of Contents
+\usepackage[nottoc]{tocbibind}
+
+% hyperref is used for hyperlinks
+% colorlinks: To show links with color
+% linkcolor = color: Color of links
+% urlcolor = color: Color of url links
+% citecolor = color: Color of bibliographic references
+% linktoc = all: For numbers in TOC colored as well
+% backref = For backreferencing the citations in the global bibliography
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue,citecolor=blue,linktoc=all,backref=section]{hyperref}
+
+% lastpage package allows for the use of the lastpage
+\usepackage{lastpage}
+
+% Titleref provides a command \titleref to cross-reference the titles of sections
+\usepackage{titleref}
+
+% backref package allows for backreferencing citations in the bibliography when used in per chapter bibliography
+% ref: section number for reference. This package is not compatible with biblatex
+%\usepackage[ref]{backref}
+
+% Multirow package allows for the creation of tables
+\usepackage{multirow}
+
+% enumitem package allows the changing of enumeration style (roman numbers...)
+\usepackage{enumitem}
+
+% Define the name of Tables
+\usepackage[format=plain,justification=centerlast,width=15cm,labelsep=period,tablename=Tabla,skip=5pt]{caption}
+
+%==================================================================================
+
+% Softens the line breaking rules from LaTeX
+\sloppy 
+
+% Changes decimal symbol to a point
+\spanishdecimal{.}		
+
+% To use normal spacing after '.'
+\frenchspacing 
+
+% The following commands allow the subsubsubsection to be numbered in the text and in the index
+\setcounter{secnumdepth}{4}		% For the text
+\setcounter{tocdepth}{4}		% For the index
+
+
+% Basic header and footer
+\pagestyle{headings} 
+
+% Margin settings
+%\setlength{\oddsidemargin}{0pt}     % Left margin for odd pages default 40pt
+%\setlength{\evensidemargin}{0pt}    % Left margin even pages default 10pt
+%\setlength{\textwidth}{450pt}       % Width of the body (default 400 pt)
+
+%
+% Recomendation to enhance the figures location
+% (taken from http://dcwww.camp.dtu.dk/~schiotz/comp/LatexTips/LatexTips.html#captfont)
+%
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+
+% To avoid Unicode char \u9: not set up for use with LaTeX error (taken from: http://tex.stackexchange.com/questions/83440/inputenc-error-unicode-char-u8-not-set-up-for-use-with-latex)
+\DeclareUnicodeCharacter{00A0}{ }
+
+% Rename Tables to Tablas in Spanish
+\addto\captionsspanish{\renewcommand*{\tablename}{Tabla}}
+
+% Formating for letters and numbers for crossreferences taken from a sublist
+\renewcommand{\mcitesubrefform}{$^{\arabic{mcitebibitemcount}\alph{mcitesubitemcount}}$} 
+%\providecommand{\mcitesubrefform}{\arabic{mcitebibitemcount}.\alph{mcitesubitemcount}}
+
+% Remove "General Index" from the minitoc
+%\renewcommand{\mtctitle}{}
+
+% Spacing from the upper border and where the main text body begins. LaTeX  complains if we use fanchyhdr and headheight is less than 15pt
+%
+%\headheight 28pt
+
+%
+% For textpos package (used for frontpage)
+%
+\setlength{\TPHorizModule}{\paperwidth}
+\setlength{\TPVertModule}{\paperheight}
+\newcommand{\tb}[4]{\begin{textblock}{#1}[0.5,0.5](#2,#3)\begin{center}#4\end{center}\end{textblock}}
+
+%
+% Command redefinition.
+% 
+% \newcommand{cmd}[args]{def}
+%
+% cmd  = command to be redefined (i.e. \char)
+% args = number of arguments
+% def  = definition, substituting #1, #2... por el first, second... argument
+%
+% For example:
+%
+% \newcommand{\water}[1]{H\ensuremath{_#1}O}
+%
+% Anytime we write "\water{33}", as output would yield: "H33O" (33 as subscript)
+%
+
+% Rename Nomenclature
+\renewcommand{\nomname}{Lista de Símbolos}
+
+% To change color to cite references in the References Section (not in the main text taken from: http://tex.stackexchange.com/questions/197293/change-the-color-of-cite-number-in-bibliography)
+\makeatletter
+\xpatchcmd{\@lbibitem}
+{\item[\hfil}
+{\item[\hfil\color{blue}}
+{}{}
+\makeatother
+
+% Rename Command in backref so the sections are in brackets
+\renewcommand*{\backref}[1]{[#1]}
+% Define Spanish words for backreferencing
+\def\backrefspanish{%
+	\def\backrefpagesname{páginas}%
+	\def\backrefsectionsname{secciones}%
+	\def\backrefsep{, }
+	\def\backreftwosep{ y~}%
+	\def\backreflastsep{ y~}%
+}
+
+% First pages with Roman numbers
+% Later they will be changed to Arabic
+%
+\pagenumbering{Roman}
+
+% To print nomenclature
+\makeglossary
+\makenomenclature
+
+% To print index
+\makeindex
+
+% The following commands allow the subsubsubsection to be numbered in the text and in the index
+\setcounter{secnumdepth}{4}		% For the text
+\setcounter{tocdepth}{4}		% For the index
+
+% -----------------------------------------------------------------------------------------------------------------------------------------------
+% CODE ZONE
+% -----------------------------------------------------------------------------------------------------------------------------------------------
+% This code forbids the inserted pages to have either header or footer
+\makeatletter
+  \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+  \vspace*{\fill}
+    \thispagestyle{empty}
+    \newpage
+    \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother
