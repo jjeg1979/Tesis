@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 %=====================================PACKAGES=====================================
+=======
+%=============================================================================PACKAGES=========================================================================================
+>>>>>>> ad66fc58d72a08250029346c22a203e2bf8662aa
 % Allows to change several parameters from headers and footers
 \usepackage{fancyhdr}
 
@@ -104,6 +108,12 @@
 % Add bibliography/index/contents to Table of Contents
 \usepackage[nottoc]{tocbibind}
 
+<<<<<<< HEAD
+=======
+% Package for backreferencing
+\usepackage[ref]{backref}
+
+>>>>>>> ad66fc58d72a08250029346c22a203e2bf8662aa
 % hyperref is used for hyperlinks
 % colorlinks: To show links with color
 % linkcolor = color: Color of links
@@ -111,7 +121,20 @@
 % citecolor = color: Color of bibliographic references
 % linktoc = all: For numbers in TOC colored as well
 % backref = For backreferencing the citations in the global bibliography
+<<<<<<< HEAD
 \usepackage[colorlinks=true,linkcolor=red,urlcolor=blue,citecolor=blue,linktoc=all,backref=section]{hyperref}
+=======
+\usepackage[linktoc=all,backref=section]{hyperref}
+% Change hyperref behaviour
+\hypersetup{
+	colorlinks=true,
+	citecolor=violet,
+	linkcolor=red,
+	urlcolor=blue,
+	citebordercolor=violet,
+	filebordercolor=red,
+	linkbordercolor=blue}
+>>>>>>> ad66fc58d72a08250029346c22a203e2bf8662aa
 
 % lastpage package allows for the use of the lastpage
 \usepackage{lastpage}
@@ -132,7 +155,14 @@
 % Define the name of Tables
 \usepackage[format=plain,justification=centerlast,width=15cm,labelsep=period,tablename=Tabla,skip=5pt]{caption}
 
+<<<<<<< HEAD
 %==================================================================================
+=======
+% Multiple columns (for index)
+\usepackage{multicol}
+
+%=============================================================================================================================================================================
+>>>>>>> ad66fc58d72a08250029346c22a203e2bf8662aa
 
 % Softens the line breaking rules from LaTeX
 \sloppy 
@@ -252,4 +282,56 @@
     \thispagestyle{empty}
     \newpage
     \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+<<<<<<< HEAD
 \makeatother
+=======
+\makeatother
+
+
+% This code lets the index to be printed in different number of columns (taken from: http://latex-community.org/forum/viewtopic.php?f=4&t=1735)
+%\makeatletter
+%\renewenvironment{theindex}
+%{\if@twocolumn
+%	\@restonecolfalse
+%	\else
+%	\@restonecoltrue
+%	\fi
+%	\setlength{\columnseprule}{0.5pt}
+%	\setlength{\columnsep}{35pt}
+%	\begin{multicols}{2}[\section*{\indexname}]
+%		\markboth{\MakeUppercase\indexname}%
+%		{\MakeUppercase\indexname}%
+%		\thispagestyle{plain}
+%		\setlength{\parindent}{0pt}
+%		\setlength{\parskip}{0pt plus 0.3pt}
+%		\relax
+%		\let\item\@idxitem}%
+%	{\end{multicols}\if@restonecol\onecolumn\else\clearpage\fi}
+%\makeatother
+\makeatletter
+\renewenvironment{theindex}
+{\if@twocolumn
+	\@restonecolfalse
+	\else
+	\@restonecoltrue
+	\fi
+	\setlength{\columnseprule}{0pt}
+	\setlength{\columnsep}{35pt}
+	\begin{multicols}{2}[\chapter*{\indexname}]          %Adjust the 2 for more columns
+		\markboth{\MakeUppercase\indexname}%
+		{\MakeUppercase\indexname}%
+		\thispagestyle{plain}
+		\setlength{\parindent}{0pt}
+		\setlength{\parskip}{0pt plus 0.3pt}
+		\relax
+		\let\item\@idxitem}%
+	{\end{multicols}\if@restonecol\onecolumn\else\clearpage\fi}
+\makeatother
+
+% This code also puts the first entries in bold
+%\makeatletter
+%\renewcommand\@idxitem{\scriptsize\bfseries\par\hangindent %40\p@}                       %Makes all the index entries small,  bold
+%\renewcommand\subitem{\scriptsize\@idxitem %\normalfont\hspace*{20\p@}}                  %Makes subitems small, normal
+%\renewcommand\subsubitem{\scriptsize\@idxitem %\normalfont\hspace*{30\p@}}               %Makes subsubitems small, normal
+%\makeatother
+>>>>>>> ad66fc58d72a08250029346c22a203e2bf8662aa
