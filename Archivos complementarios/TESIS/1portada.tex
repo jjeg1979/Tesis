@@ -1,0 +1,47 @@
+%
+% Este fichero produce la primera pï¿½gina del PFC/Tesis, con el
+% tï¿½tulo, tu nombre, el nombre del supervisor, etc.
+%
+% La mayorï¿½a, si no todo el contenido de esta pï¿½gina estï¿½ incluido a travï¿½s 
+% de comandos (p.e. \thesistitle) que han sido definidos en Config/rename.tex
+%
+% Editar a voluntad.
+%
+
+\pagestyle{empty} % no imprimir ni nï¿½mero, ni cabecera ni piï¿½ de pï¿½gina
+
+%
+% Usa \tb para colocar varios items en la pï¿½gina. Uso:
+%
+% \tb{w}{h}{v}{t}
+%
+% donde:
+%
+% w = ancho de la caja con el texto (1.0 = ancho de pï¿½gina)
+% h = posiciï¿½n horizontal del centro de la caja de texto (0.0 = izquierda, 1.0 = derecha)
+% v = posiciï¿½n vertical del centro de la caja de texto (0.0 = arriba, 1.0 = abajo)
+% t = texto a incluir en la caja de texto
+%
+
+\tb{0.9}{0.52}{0.10}{\includegraphics[width=0.90\columnwidth]{\logo}} % logo 
+\tb{0.8}{0.52}{0.32}{\Large \textsc{\worktype}}                        % si es PFC o Tesis
+\tb{0.7}{0.52}{0.45}{\huge \textsc{\thesistitle}}                      % Titulo
+%\tb{0.9}{0.52}{0.55}{\huge \textsc{\thesissubtitle}}                      % subtitulo
+\tb{0.8}{0.32}{0.65}{\large \textsc{Autor:}} 
+\tb{0.8}{0.32}{0.68}{\large \textsc{\myname}} 
+\tb{0.8}{0.72}{0.65}{\large \textsc{Director:}} 
+\tb{0.8}{0.72}{0.68}{\large  \textsc{ \textsc{\myboss}}}          % nombre del autor
+\tb{0.5}{0.52}{0.77}{\textsc{Programa de Doctorado en Química}}
+\tb{0.5}{0.52}{0.80}{\textsc{Dept. Química. Facultat de Ciencies}}
+
+\tb{0.5}{0.52}{0.83}{\textsc{2009}} 
+\tb{0.9}{0.52}{0.90}{\includegraphics[width=0.90\columnwidth]{\logodos}} 
+
+\
+\clearpage
+\thispagestyle{empty} 
+\ 
+\clearpage 
+
+
+

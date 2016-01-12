@@ -4,11 +4,20 @@
 %{\hspace{.5em}\titlerule*[10pt]{$\cdot$}\contentspage}
 
 
-\dominitoc        % que cada capítulo tenga su ToC (necesita el paquete "minitoc" antemencionado)
+%\dominitoc        % que cada capítulo tenga su ToC (necesita el paquete "minitoc" antes mencionado)
 \tableofcontents  % insertar ToC en este punto
 
-%\listoffigures    % insertar lista de Figuras (LoF) en este punto (opcional)
-%\listoftables     % insertar lista de Tablas (LoT) en este punto (opcional)
+% Add a List of Figures
+\newpage{\pagestyle{empty}\cleardoublepage}
+\listoffigures
+
+% Add a List Of Tables
+\newpage{\pagestyle{empty}\cleardoublepage}
+\listoftables
+
+% Adds the Nomenclature
+\newpage{\pagestyle{empty}\cleardoublepage}
+\printnomenclature
 
 \cleardoublepage
 

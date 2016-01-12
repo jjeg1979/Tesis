@@ -13,7 +13,7 @@
 
 % Packet geometry to design document
 \usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm,footskip=1cm]{geometry}
-\parindent = 5mm		% Sangr�a
+\parindent = 5mm		% Sangría
 
 % fixltx2e allows for the use of subscripts and superscripts inside the text
 \usepackage{fixltx2e}           
@@ -24,6 +24,9 @@
 % table is for including color in tables
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 
+% Package to change color to references (taken from: http://tex.stackexchange.com/questions/197293/change-the-color-of-cite-number-in-bibliography)
+\usepackage{xpatch}
+
 % Allows to rotate PSs and EPSs
 \usepackage{rotating}          
 
@@ -31,7 +34,8 @@
 \usepackage{textcomp}          %
 
 % Allows to include several TOC in every chapter
-\usepackage[spanish]{minitoc}           
+%\usepackage[spanish]{minitoc}           
+\usepackage{titletoc}
 
 % Manipulations for EPSs
 \usepackage{epsf}            
@@ -44,7 +48,7 @@
 \usepackage[utf8]{inputenc} 
 
 % Standard package for selecting font encodings
-\usepackage[T1,T2A]{fontenc}
+\usepackage[T1]{fontenc}
 
 % Fonts to typeset mathematics to match Palatino
 \usepackage{mathpazo}		% Defines Mathpatho font
@@ -67,7 +71,7 @@
 \usepackage{subfig}
 
 % For the bibliography (natbib allows for multiple bibliographies in one document)
-\usepackage[sort&compress,super,comma,sectionbib]{natbib}
+\usepackage[sort&compress,super,comma, square, sectionbib]{natbib}
 \usepackage{chapterbib}
 
 % Integrating notes into the bibliography
@@ -122,6 +126,12 @@
 % Multirow package allows for the creation of tables
 \usepackage{multirow}
 
+% enumitem package allows the changing of enumeration style (roman numbers...)
+\usepackage{enumitem}
+
+% Define the name of Tables
+\usepackage[format=plain,justification=centerlast,width=15cm,labelsep=period,tablename=Tabla,skip=5pt]{caption}
+
 %==================================================================================
 
 % Softens the line breaking rules from LaTeX
@@ -165,11 +175,11 @@
 %\providecommand{\mcitesubrefform}{\arabic{mcitebibitemcount}.\alph{mcitesubitemcount}}
 
 % Remove "General Index" from the minitoc
-\renewcommand{\mtctitle}{}
+%\renewcommand{\mtctitle}{}
 
 % Spacing from the upper border and where the main text body begins. LaTeX  complains if we use fanchyhdr and headheight is less than 15pt
 %
-\headheight 28pt
+%\headheight 28pt
 
 %
 % For textpos package (used for frontpage)
@@ -194,18 +204,52 @@
 % Anytime we write "\water{33}", as output would yield: "H33O" (33 as subscript)
 %
 
+% Rename Nomenclature
+\renewcommand{\nomname}{Lista de Símbolos}
+
+% To change color to cite references in the References Section (not in the main text taken from: http://tex.stackexchange.com/questions/197293/change-the-color-of-cite-number-in-bibliography)
+\makeatletter
+\xpatchcmd{\@lbibitem}
+{\item[\hfil}
+{\item[\hfil\color{blue}}
+{}{}
+\makeatother
+
 % Rename Command in backref so the sections are in brackets
-%\renewcommand*{\backref}[1]{[#1]}
+\renewcommand*{\backref}[1]{[#1]}
 % Define Spanish words for backreferencing
-%\def\backrefspanish{%
-%	\def\backrefpagesname{p�ginas}%
-%	\def\backrefsectionsname{secciones}%
-%	\def\backrefsep{, }
-%	\def\backreftwosep{ y~}%
-%	\def\backreflastsep{ y~}%
-%}
+\def\backrefspanish{%
+	\def\backrefpagesname{páginas}%
+	\def\backrefsectionsname{secciones}%
+	\def\backrefsep{, }
+	\def\backreftwosep{ y~}%
+	\def\backreflastsep{ y~}%
+}
 
 % First pages with Roman numbers
 % Later they will be changed to Arabic
 %
 \pagenumbering{Roman}
+
+% To print nomenclature
+\makeglossary
+\makenomenclature
+
+% To print index
+\makeindex
+
+% The following commands allow the subsubsubsection to be numbered in the text and in the index
+\setcounter{secnumdepth}{4}		% For the text
+\setcounter{tocdepth}{4}		% For the index
+
+% -----------------------------------------------------------------------------------------------------------------------------------------------
+% CODE ZONE
+% -----------------------------------------------------------------------------------------------------------------------------------------------
+% This code forbids the inserted pages to have either header or footer
+\makeatletter
+  \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+  \vspace*{\fill}
+    \thispagestyle{empty}
+    \newpage
+    \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother

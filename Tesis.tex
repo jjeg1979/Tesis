@@ -1,0 +1,188 @@
+% The following defines de document class plus some options:
+% 12pto: Size of the font
+% a4paper: Size of sheet
+% twoside: Printable in both sides
+% openright: Chapters open in right-hand page
+% titlepage: Causes the \maketitle command to make a separate title page and the abstract environment to put the abstract on a separate page. 
+% fleqn: Left-aligns displayed formulas
+\documentclass[11pt,a4paper,twoside,openright,titlepage,fleqn]{book}
+% \documentclass[11pt,a4paper,twoside,titlepage,fleqn]{book}
+
+% include the style file
+\input{Style/estilo}
+\spanishdecimal{.}		% Changes decimal symbol to a point
+% Fine tuning to style file. Babel package doesn't correctly produce output for these items:
+\addto\captionsspanish{\renewcommand\listtablename{�ndice de Tablas}}
+\addto\captionsspanish{\renewcommand\listfigurename{�ndice de Figuras}}
+
+% For the nomenclature to be created
+\makenomenclature
+% For the index to be create
+\makeindex
+
+% To avoind complains about the headheight value (at leas 27.72116 pt)
+\setlength{\headheight}{28pt}
+
+% More customization on headers and footers (lowercase and no chapter numbers)
+\renewcommand{\chaptermark}[1]{ \markboth{#1}{} }
+\renewcommand{\sectionmark}[1]{ \markright{#1}{} }
+
+
+% Customization of general TOC
+%\titlecontents{chapter}[1pt]{\vspace{.1\baselineskip}\bfseries}
+%    {\textcolor{red}{\thecontentslabel\hspace{2.8mm}}}{}
+%    {\hspace{.5em}\titlerule*[10pt]{$\cdot$}\contentspage\\
+%    {\rule{.9\textwidth}{0.8pt}}}
+    
+% Customization of per chapter TOC    
+%\titlecontents{section}[1pt]{\vspace{.1\baselineskip}\bfseries}
+%    {\thecontentslabel\hspace{2.8mm}}{\rule{\linewidth}{1.5pt}\\}
+%    {\hspace{.5em}\titlerule*[10pt]{$\cdot$}\contentspage}
+
+% ================================================== CODE INSIDE THE MAIN TEXT =================================================================
+\makeatletter
+\renewcommand\@cite[2]{%
+Ref.~#1\ifthenelse{\boolean{@tempswa}}
+{, \nolinebreak[3] #2}{}
+}
+\renewcommand\@biblabel[1]{[#1]}
+\renewcommand{\@cite}[1]{\cite{{#1}}}
+\renewcommand\citeform[1]{\textbf{[#1]}}
+%\renewcommand\citeleft{[} 
+%\renewcommand\citeright{]} 
+\makeatother
+
+\let\cite=\citen
+
+% ==============================================================================================================================================
+
+\begin{document}
+% We need to add this command for the minitoc to work
+%\dominitoc
+% This has to appear before any included file if it is desired for the overall bibliography
+% Include first two pages
+\include{Portada/Pagina1}
+\newpage{\pagestyle{empty}\cleardoublepage}
+\include{Portada/Pagina2}
+%\newpage{\pagestyle{empty}\cleardoublepage}
+
+\frontmatter
+	% \include{abstract}	
+	% \include{Agradecimientos}
+  	% Starts roman numbering
+  	% \setcounter{page}{1}			% This is done automatically with \frontmatter environment
+ 	% \pagenumbering{Roman}
+ 	
+	% Clear header and footer for TOC
+	% Add a Table Of Contents.
+	% Redefine the plain style (this is for first chapters' pages to have header and footer)
+	\fancypagestyle{plain}{%
+		\fancyhf{}%
+		\fancyhead[LE,RO]{}
+		\fancyhead[RE,LO]{}
+		\fancyfoot[CE,CO]{}
+		\fancyfoot[LE,RO]{\thepage}
+		\fancyfoot[RE,LO]{}
+		\renewcommand{\headrulewidth}{0pt}
+		\renewcommand{\footrulewidth}{0.4pt}
+	}
+
+  	\tableofcontents
+  		
+	% Add a List of Figures
+	\newpage{\pagestyle{empty}\cleardoublepage}
+  	\listoffigures
+	
+	% Add a List Of Tables
+	\newpage{\pagestyle{empty}\cleardoublepage}
+ 	\listoftables
+ 	
+ 	% Adds the List of Symbols
+ 	\newpage{\pagestyle{empty}\cleardoublepage}
+ 	\printnomenclature
+	% \include{Symbols/ListaSimbolos}
+	% \newpage{\pagestyle{empty}\cleardoublepage}
+
+
+\mainmatter
+	% -------------------------------------------------------------------------------------------------------------------------------------------
+	% DEFINE HEADERS AND FOOTERS FOR THIS PART
+	%--------------------------------------------------------------------------------------------------------------------------------------------
+	% Define header of odd and even pages. Redefine the plain style (this is for first chapters' pages to have header and footer)
+	\fancypagestyle{plain}{%
+		\fancyhf{}% Erases headers and footers
+		\fancyhead[LE,RO]{{\small \nouppercase{\leftmark} }}
+		\fancyhead[RE,LO]{{\small \nouppercase{\rightmark}}}
+		\fancyfoot[CE,CO]{}
+		\fancyfoot[LE,RO]{\thepage \qquad de \qquad \pageref{LastPage}}
+		\fancyfoot[RE,LO]{J.J.Exp�sito}
+		\renewcommand{\headrulewidth}{0.4pt}
+		\renewcommand{\footrulewidth}{0.4pt}
+	}
+	% -------------------------------------------------------------------------------------------------------------------------------------------
+	% =================================================== CAP�TULO 1 ============================================================================
+	\pagestyle{plain}			% Set headers and footers as fancy
+	%\chapter{INTRODUCCI�N}\label{cap:Introduccion}
+	%\minitoc	
+	\include{Chapter1/Capitulo1}
+	%\newpage{\pagestyle{empty}\cleardoublepage}
+	% -------------------------------------------------------------------------------------------------------------------------------------------
+	% -------------------------------------------------------------------------------------------------------------------------------------------
+	% =================================================== CAP�TULO 2 ============================================================================
+	\pagestyle{plain}			% Set headers and footers as fancy	
+	%\minitoc
+	\include{Chapter2/Capitulo2}
+	%\newpage{\pagestyle{empty}\cleardoublepage}
+	% -------------------------------------------------------------------------------------------------------------------------------------------
+	% -------------------------------------------------------------------------------------------------------------------------------------------
+	% =================================================== CAP�TULO 3 ============================================================================
+	\pagestyle{plain}			% Set headers and footers as fancy	
+	%\minitoc
+	\include{Chapter3/Capitulo3}
+	%\newpage{\pagestyle{empty}\cleardoublepage}
+	% -------------------------------------------------------------------------------------------------------------------------------------------
+	% -------------------------------------------------------------------------------------------------------------------------------------------
+	% =================================================== CAP�TULO 4 ============================================================================
+	%\include{Chapter4/Capitulo4}
+	%\newpage{\pagestyle{empty}\cleardoublepage}
+	% -------------------------------------------------------------------------------------------------------------------------------------------
+	% -------------------------------------------------------------------------------------------------------------------------------------------
+	% =================================================== CAP�TULO 5 ============================================================================
+	%\include{Chapter5/Capitulo5}
+	%\newpage{\pagestyle{empty}\cleardoublepage}
+	% -------------------------------------------------------------------------------------------------------------------------------------------
+	% -------------------------------------------------------------------------------------------------------------------------------------------
+	% =================================================== CAP�TULO 6 ============================================================================
+	%\include{Chapter6/Capitulo6}
+	%\newpage{\pagestyle{empty}\cleardoublepage}
+	% -------------------------------------------------------------------------------------------------------------------------------------------
+	% -------------------------------------------------------------------------------------------------------------------------------------------
+	% =================================================== CAP�TULO 7 ============================================================================
+	%\include{Chapter7/Capitulo7}
+	%\newpage{\pagestyle{empty}\cleardoublepage}
+	% -------------------------------------------------------------------------------------------------------------------------------------------
+	% -------------------------------------------------------------------------------------------------------------------------------------------
+		
+\backmatter
+	
+	%--------------------------------------------------------------------------------------------------------------------------------------------
+	% Include the Appendix	
+	%--------------------------------------------------------------------------------------------------------------------------------------------
+	\appendix
+	% -------------------------------------------------------------------------------------------------------------------------------------------
+	% \newpage{\pagestyle{empty}\cleardoublepage}	
+	\pagestyle{plain}	
+	\include{AppendixI/ApendiceBeerLambert}
+	% -------------------------------------------------------------------------------------------------------------------------------------------
+	%\newpage{\pagestyle{empty}\cleardoublepage}
+	%\include{AppendixII/ApendiceFallingFactorials}
+	%--------------------------------------------------------------------------------------------------------------------------------------------	
+	%--------------------------------------------------------------------------------------------------------------------------------------------	
+	% Includes a Bibliography
+	%--------------------------------------------------------------------------------------------------------------------------------------------
+	\bibliographystyle{ealpha}	
+	\bibliography{References/Tesis}
+	%--------------------------------------------------------------------------------------------------------------------------------------------	
+	\printindex
+		
+\end{document}

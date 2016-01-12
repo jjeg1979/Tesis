@@ -13,6 +13,7 @@
 % Begin of document
 \begin{document}
 	\begin{onehalfspace}
+	%\frontmatter
 		%
 		% The values of several variables like author, thesis title... are written in rename.tex
 		%
@@ -23,15 +24,19 @@
 		%
 		\input{Cascara/Portada.tex}
 		
-		%
+		% CONFIG Frontmatter
 		\input{Config/begin.tex}
 		
 %		\input{Cascara/Agradecimientos}
 		\input{Cascara/Pagina1.tex}
-		\input{Cascara/Pagina2.tex}	
+		\input{Cascara/Pagina2.tex}
+		
+		%\input{Cascara/TablasYFiguras.tex}
+			
 		\input{Cascara/ListaSimbolos.tex}	
 		\input{Cascara/TOC.tex}
 		
+	%\mainmatter
 		%
 		% CONFIG: Chapters style
 		%
@@ -40,10 +45,26 @@
 		%
 		% CONTENT: All the chapters
 		\input{Chapters/01Introduccion.tex}
-		%\input{Chapters/02MetodosFractales.tex}
-		%\input{Chapters/03MetodoPropuesto.tex}
+		\input{Chapters/02ProcesosFormacionYMorfologia.tex}
+		\input{Chapters/03InstalacionesExperimentales.tex}
+		\input{Chapters/04MetodoPropuesto.tex}
 		%\input{Chapters/05Sintering.tex}
 		%\input{Chapters/06Aplicacion.tex}
+		
+	%\backmatter
+	
+		\appendix
+		%
+		% CONFIG. TODO
+		%
+		\input{Chapters/IApendiceBeerLambert.tex}
+		\input{Chapters/IIApendiceFallingFactorials.tex}
+
+		\newpage{\pagestyle{empty}\cleardoublepage}
+		\pagestyle{empty}
+		\printindex
+		
+		
 		
 	\end{onehalfspace}
 \end{document}

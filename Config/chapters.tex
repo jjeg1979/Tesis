@@ -6,3 +6,15 @@
 \renewcommand{\chaptername}{}
 %\newcommand{\tocchapter}[1]{\cleardoublepage\chapter{#1}\minitoc\newpage}
 %\newcommand{\tocchapterx}[1]{\cleardoublepage\chapter{#1}\newpage} %para evitar el minitoc
+
+% New headers and footers
+\fancypagestyle{plain}{%
+	\fancyhf{}% Erases headers and footers
+	\fancyhead[LE,RO]{{\small \nouppercase{\leftmark} }}
+	\fancyhead[RE,LO]{{\small \nouppercase{\rightmark}}}
+	\fancyfoot[CE,CO]{}
+	\fancyfoot[LE,RO]{\thepage \qquad de \qquad \pageref{LastPage}}
+	\fancyfoot[RE,LO]{J.J.Expósito}
+	\renewcommand{\headrulewidth}{0.4pt}
+	\renewcommand{\footrulewidth}{0.4pt}
+}
