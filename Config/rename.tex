@@ -40,12 +40,15 @@
 	Ref.~#1\ifthenelse{\boolean{@tempswa}}
 	{, \nolinebreak[3] #2}{}
 }
-\renewcommand\@biblabel[1]{[#1]}
-\renewcommand{\@cite}[1]{\cite{{#1}}}
-\renewcommand\citeform[1]{\textbf{[#1]}}
+
+\definecolor{indigo(dye)}{rgb}{0.0, 0.25, 0.42}
+\renewcommand\@biblabel[1]{\textbf{[#1]}}
+\renewcommand{\@cite}[1]{\textbf{\textcolor{cyan}{\cite{{#1}}}}}
+\renewcommand\citeform[1]{\textcolor{indigo(dye)}{\textbf{[#1]}}}
 \renewcommand\citeleft{[} 
 \renewcommand\citeright{]} 
 \makeatother
 
+\let\cite=\citep
 \let\cite=\citen
 
