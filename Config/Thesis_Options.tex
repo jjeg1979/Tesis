@@ -28,12 +28,22 @@
 \usepackage{rotating}          
 
 % Euro symbol
-\usepackage{textcomp}          %
+\usepackage{textcomp}          
+
+\usepackage{tocloft}
 
 % Allows to include several TOC in every chapter
-%\usepackage[spanish]{minitoc}           
+%\usepackage[spanish]{minitoc} 
+%\usepackage{titlesec}          
 \usepackage{titlesec,titletoc}
 
+% For adding a horizontal line in the LOF, LOT, TOC (taken from: http://tex.stackexchange.com/questions/283070/insert-two-horizontal-lines-above-and-below-contents-and-list-of-figures)
+%\titleformat{name=\chapter,numberless}
+%{\bfseries\huge}
+%{}
+%{0ex}
+%{\titlerule\vspace{1.5ex}\filright}
+%[\vspace{1ex}\titlerule]
 % Manipulations for EPSs
 \usepackage{epsf}            
 
@@ -143,6 +153,14 @@
 % Multiple columns (for index)
 \usepackage{multicol}
 
+% To display figures, tables and equations per section
+\usepackage{chngcntr} 
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+\counterwithin{equation}{section}
+
+% Reference: https://www.physicsforums.com/threads/latex-list-of-figures-organised-by-chapter.290236/
+
 
 %=============================================================================================================================================================================
 
@@ -223,10 +241,29 @@
 \renewcommand{\nomname}{Lista de Símbolos}
 
 
+
 % Add a rule after TOC for package tocloft
-%\renewcommand\cftaftertoctitle{\par\noindent\hrulefill\par\vskip-4.3em}
-%\setlength\cftparskip{-2pt}
-%\setlength\cftbeforechapskip{0pt}
+\renewcommand\cftaftertoctitle{\par\par\noindent\color{DarkBlue}{\hrulefill}\par\vskip 10pt}
+\renewcommand\cftafterloftitle{\par\par\noindent\color{DarkBlue}{\hrulefill}\par\vskip 10pt}
+\renewcommand\cftafterlottitle{\par\par\noindent\color{DarkBlue}{\hrulefill}\par\vskip 10pt}
+\setlength\cftparskip{-2pt}
+\setlength\cftbeforechapskip{0pt}
+
+% Customization of TOC/LOF/LOT with titletoc (taken from: http://tex.stackexchange.com/questions/60924/how-can-i-customize-the-list-of-tables-with-the-titletoc-package) and from: http://tex.stackexchange.com/questions/261364/modifying-list-of-tables-images
+
+%\titleformat{chapter}[display]%             
+%{\relax}
+%{\raggedleft{\color{halfgray}\chapterNumber\thechapter} \\ }
+%{0pt}%
+%{\titlerule\vspace*{.9\baselineskip}\raggedright\spacedallcaps}[\normalsize\vspace*{.8\baselineskip}\titlerule]%
+
+\titlecontents{chapter}[0pt]
+{\vspace{.4\baselineskip}\bfseries}
+{\textcolor{DarkBlue}{\thecontentslabel\hspace{1.8mm}}}
+{}
+%{\titlerule\vspace*{.9\baselineskip}\raggedright\spacedallcaps}[\normalsize\vspace*{.8\baselineskip}\titlerule]
+{\hspace{.5em}\titlerule*[10pt]{$\cdot$}\contentspage}
+%{\titlerule\vspace*{.9\baselineskip}\raggedright[\normalsize\vspace*{.8\baselineskip}\titlerule]{$\cdot$}\contentspage}
 
 
 % To change color to cite references in the References Section (not in the main text taken from: http://tex.stackexchange.com/questions/197293/change-the-color-of-cite-number-in-bibliography)
