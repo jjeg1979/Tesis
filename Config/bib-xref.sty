@@ -1,0 +1,130 @@
+% bib-xref.sty
+\typeout{Cross-referenced Bibliography Style `bib-xref' <10 Sep 1991>}
+
+% A refinement of BibTeX \cite that keeps track of the pages on which each
+% reference is cited, and sets a list of these pages at the end of the
+% reference.  To use this, you need to alter the behaviour of BibTeX (step 1)
+% and the behaviour of LaTeX (step (2).
+
+% (1) Hack your favourite BibTeX style file (e.g., plain.bst) so
+%     that it outputs "\citepages{<BibTeX key>}" at the end of each
+%     reference.  If you use the standard plain.bst style file, then
+%     switch to /homes/adg/TeX/plain+.bst, which I have hacked already.
+%     If you want to hack another file, note that the only
+%     difference between plain.bst and plain+.bst is fin.entry:
+%
+%     FUNCTION {fin.entry}  % adg
+%     { add.period$ write$
+%       newline$  
+%       "\citepages{" write$
+%       cite$ write$
+%       "}" write$
+%       newline$
+%     }
+
+% (2) Include bib-xref in the list of style files you give to
+%     \documentstyle.
+
+% That's it!  Report any bugs to Andy....@cl.cam.ac.uk. (25 August 1991)
+
+% ----------------------------------------------------------------------
+% This started one evening when Mike Burrows persuaded me to hack something
+% up for his thesis.  The result worked but was internally gruesome.
+% That was 23 September 1988.
+% Mads Rosendahl tidied up the code sometime in 1990.
+% Kish Shen fixed some bugs in July 1991.
+% Andy Gordon rearranged the code somewhat on 25 August 1991.
+% Kish Shen's fix for out-by-one page numbers included on 10 September 1991.
+
+% ----------------------------------------------------------------------
+% Modify \cite so if the current page is p, and you say,
+%
+%    \cite{key1,...,keyn}
+%
+% then you get the following calls:
+%
+%    \pagecite{key1}{p}
+%    ...
+%    \pagecite{keyn}{p}
+%
+% and then you get whatever \cite originally did.
+
+\let\prev@cite=\cite
+
+\input xref-cite
+==============================
+% xref-cite.tex
+%
+% Bits of code common between bib-xref.sty and chapterbib-xref.sty
+%
+\def\cite{\@ifnextchar[{\@pgcitetrue}{\@pgcitefalse}}
+
+\def\@pgcitetrue[#1]#2{%
+  \@for\pagecitekey:=#2\do{\@delaycite{\pagecitekey}}%
+  \prev@cite[#1]{#2}}
+
+\def\@pgcitefalse#1{%
+  \@for\pagecitekey:=#1\do{\@delaycite{\pagecitekey}}%
+  \prev@cite{#1}}
+
+% Kish Shen's hack from \label code to get page numbers right
+\def\@delaycite#1{\@bsphack\if@filesw {\let\thepage\relax
+   \def\protect{\noexpand\noexpand\noexpand}%
+   \xdef\@gtempa{\write\@auxout{\string
+   \pagecite{#1}{\thepage}}}}\@gtempa
+   \if@nobreak \ifvmode\nobreak\fi\fi\fi\@esphack}
+
+% ----------------------------------------------------------------------
+% Define the pagelist for each bibkey. 
+%
+% Defs and labels:
+%
+% \def\c@<BibTeX key>    List of pages on which <key> is cited
+% \def\n@<BibTeX key>    Last page on which <key> was cited
+
+\def\namexdef#1{\expandafter\xdef\csname #1\endcsname}
+
+% pagecite{<KEY>}{<PAGE>} =
+%  ifundefined c@<KEY>
+%     c@<KEY> := <PAGE>
+%  else
+%     if n@<KEY> := <PAGE>
+%        c@<KEY> := c@<KEY> , <PAGE>
+%  n@<KEY> := <PAGE>
+%
+\def\pagecite#1#2{
+  \@ifundefined{c@#1}{
+    \namexdef{c@#1}{#2}
+  }{
+    \namexdef{tp}{#2}
+    \namexdef{tn}{\@nameuse{n@#1}}
+    \ifx\tp\tn\else
+      \namexdef{c@#1}{\@nameuse{c@#1}, #2}
+    \fi
+  }
+  \namexdef{n@#1}{#2}    
+% \typeout{Pagecite `#1' at page #2 (\@nameuse{c@#1}) }
+}
+
+% ----------------------------------------------------------------------
+% Define what \citepages{<BibTeX key>} does when it is planted by the
+% BibTeX style after the reference for key.
+
+\def\citepages#1{
+  \@ifundefined{c@#1}{%
+    \typeout{Bib-XRef Warning: No page list for reference `#1'.}
+  }{%
+    \newblock                            % newline if "open" format used
+    \namexdef{tn}{\@nameuse{n@#1}}
+    \namexdef{tc}{\@nameuse{c@#1}}
+    {\ifx\tn\tc
+%     \typeout{Reference `#1'\space cited on page \@nameuse{c@#1}}%
+      \small (p\,%
+    \else
+%     \typeout{Reference `#1'\space cited on pages \@nameuse{c@#1}}%
+      \small (pp\,%
+     \fi%
+     \@nameuse{c@#1})%
+    }
+  }
+}

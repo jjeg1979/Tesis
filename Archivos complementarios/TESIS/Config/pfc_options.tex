@@ -1,0 +1,117 @@
+%
+% Paquetes que pueden serte de utilidad (rec = recomendado, opc = opcional)
+%
+\usepackage{fancyhdr}          % (rec)  permite cambiar varios par�metros de las cabeceras y pi�s de p�gina
+%\usepackage{courier}           % (opc)  usa esta fuente por defecto
+\usepackage{setspace}          % (opc)  permite cambiar el espaciado entre l�neas
+\usepackage{longtable}         % (opc)  permite que las tablas ocupen varias p�ginas
+\usepackage{lscape}            % (opc)  permite el uso del comando \landscape, para poner algo apaisado
+\usepackage{color}             % (opc)  varios comandos relativos al color (como \color)
+\usepackage{rotating}          % (opc)  permite rotar PSs y EPSs
+\usepackage{textcomp}          % (opc)  permite incluir el s�mbolo del euro, con \texteuro
+\usepackage[spanish]{minitoc}           % (opc)  permite incluir ToCs (�ndice de materias) para cada cap�tulo
+\usepackage{epsf}              % (opc)  permite ciertas manipulaciones a EPSs
+\usepackage[absolute]{textpos} % (rec)  permite posicionado arbitrario de texto (necesario para la portada)
+\usepackage[spanish]{babel}   % (rec)  da soporte para castellano a LaTeX
+\usepackage[latin1]{inputenc}  % (opc)  permite introducir caracteres como �, etc, en el input
+\usepackage{latexsym} % S�mbolos 
+\usepackage{graphicx} % Inclusi�n de gr�ficos. Soporte para \figura (m�s abajo) 
+\usepackage{Config/bpchem}
+\usepackage[version=3]{mhchem}
+\usepackage[sort&compress,super,comma]{natbib}
+\usepackage{notes2bib}
+\usepackage{mciteplus}
+\usepackage{xkeyval}
+\usepackage{enumerate}
+\sloppy % suaviza las reglas de ruptura de l�neas de LaTeX
+\frenchspacing % usar espaciado normal despu�s de '.'
+\pagestyle{headings} % p�ginas con encabezado y pie b�sico
+
+%
+% Settings para los m�rgenes. Descomenta y modifica si sabes lo que haces. N�tese
+% que a los valores dados se les a�ade una pulgada extra. Los valores dados son los
+% predeterminados para papel A4 y el estilo itsas_pfc.cls.
+%
+\setlength{\oddsidemargin}{0pt}     % m�rgen izquierdo para p�ginas impares (izquierda) default 40pt
+\setlength{\evensidemargin}{0pt}    % m�rgen izquierdo para p�ginas pares (derecha) default 10pt
+\setlength{\textwidth}{450pt}        % anchura del cuerpo de texto default 400pt
+
+%
+% Recomendado para mejorar la colocaci�n autom�tica de las figuras.
+% (tomado de http://dcwww.camp.dtu.dk/~schiotz/comp/LatexTips/LatexTips.html#captfont)
+%
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+
+\addto\captionsspanish{\renewcommand*{\tablename}{Tabla}}
+
+%formateo de los numero y letras de las referencias cruzadas sacadas de una sublista
+\renewcommand{\mcitesubrefform}{$^{\arabic{mcitebibitemcount}\alph{mcitesubitemcount}}$}
+%\providecommand{\mcitesubrefform}{\arabic{mcitebibitemcount}.\alph{mcitesubitemcount}}
+
+%quita ``indice general'' en el minitoc
+\renewcommand{\mtctitle}{}
+
+% Espacio entre el borde superior de la p�gina y donde comienza el texto (ah� van las
+% cabeceras). LaTeX se queja si usamos el paquete fanchyhdr y headheight es menor de 15pt
+%
+\headheight 15pt
+
+%
+% Para el paquete textpos (usado para la portada)
+%
+\setlength{\TPHorizModule}{\paperwidth}
+\setlength{\TPVertModule}{\paperheight}
+\newcommand{\tb}[4]{\begin{textblock}{#1}[0.5,0.5](#2,#3)\begin{center}#4\end{center}\end{textblock}}
+
+%
+% Aqu� puedes definir tus comandos.
+% 
+% \newcommand{cmd}[args]{def}
+%
+% cmd  = el comando a definir (p.e. \cadena)
+% args = el n�mero de argumentos
+% def  = la definici�n, sustituyendo #1, #2... por el primer, segundo... argumento
+%
+% Por ejemplo:
+%
+% \newcommand{\agua}[1]{H\ensuremath{_#1}O}
+%
+% Cada vez que escribamos "\agua{33}", en el output saldr�: "H33O" (con el 33 como sub�ndice)
+%
+
+\newcommand{\Cscosane}{\BPChem{Cs[3,3'-Co(1,2-C\_2B\_9H\_{11})\_2]}}
+\newcommand{\cosane}{\BPChem{[3,3'-Co(1,2-C\_2B\_9H\_{11})\_2]\^{--}}}
+\newcommand{\cosaneSiH}{\BPChem{[1,1'-$\mu$-SiMeH-3,3'-Co(1,2-C\_2B\_9H\_{10})\_2]\^{--}}}
+\newcommand{\cosanep}{\BPChem{[8,8'-$\mu$-C\_6H\_4-3,3'-Co(1,2-C\_2B\_9H\_{10})\_2]\^{--}}}
+\newcommand{\Cscosanep}{\BPChem{Cs[8,8'-$\mu$-C\_6H\_4-3,3'-Co(1,2-C\_2B\_9H\_{10})\_2]}}
+\newcommand{\cosanefrag}{\BPChem{[1,1'-$\mu$-Si(CH\_2-)(CH\_3)-3,3'-Co(1,2-C\_2B\_9H\_{10})\_2]\^{--}}}
+\newcommand{\dendron}{\BPChem{[1,1'-$\mu$-Si(CH\_3)\{(CH\_2)\_2-Si(CHCH\_2)\_3\}-3,3'-Co(1,2-C\_2B\_9H\_{10})\_2]\^{--}}}
+\newcommand{\cocho}{\BPChem{[1,1'-$\mu$-SiMe\_2-8,8'-$\mu$-C\_6H\_4-3,3'-Co(1,2-C\_2B\_9H\_{10})\_2]\^{--}}}
+\newcommand{\ccuatro}{\BPChem{[1,1'-$\mu$-SiMe\_2-3,3'-Co(1,2-C\_2B\_9H\_{10})\_2]\^{--}}}
+\newcommand{\ctres}{\BPChem{[1-SiMe\_2H-3,3'-Co(1,2-C\_2B\_9H\_{10})(1',2'-C\_2B\_9H\_{11})]\^{--}}}
+\newcommand{\cdiox}{\BPChem{[3,3'-Co(8-C\_4H\_8O\_2-1,2-C\_2B\_9H\_{10})(1',2'-C\_2B\_9H\_{11})]}}
+\newcommand{\cseis}{Cs\BPChem{[1-SiMe\_3-3,3'-Co(1,2-C\_2B\_9H\_{10})(1',2'-C\_2B\_9H\_{11})]}}
+\newcommand{\csiete}{Cs\BPChem{[1,1'-(SiMe\_3)\_2-3,3'-Co(1,2-C\_2B\_9H\_{10})\_2]}}
+\newcommand{\cnueve}{Cs\BPChem{[8,8'-$\mu$-(C\_6H\_4)-1,1'-$\mu$-SiMeH-3,3'-Co(1,2-C\_2B\_9H\_{9})\_2]}}
+\newcommand{\cdiez}{Cs\BPChem{[8,8'-$\mu$-(C\_6H\_4)-1-SiMe\_3-3,3'-Co(1,2-C\_2B\_9H\_{9})(1',2'-C\_2B\_9H\_{10})]}}
+\newcommand{\ccinco}{\BPChem{[1,1'-$\mu$-SiMeH-3,3'-Co(1,2-C\_2B\_9H\_{10})\_2]\^{--}}}
+
+
+%pruebas entre bpchem y ce
+%\ce{[3 , 3' - Co( 1 ,2 - C_2B_9H_{11})_2]^-}
+
+%\BPChem{[3,3'-Co(1,2-C\_2B\_9H\_{11})\_2]\^-}
+
+% Aqu� puedes instruir a LaTeX de por d�nde cortar las palabras que �l autom�ticamente
+% no sepa. P.e., para cortar "gnomonly" solo por donde se se�ala con guiones (-).
+%
+\hyphenation{gno-mon-ly} 
+ 
+%
+% Que las primeras p�ginas sean numeradas con n�meros romanos.
+% M�s adelante se cambiar� de nuevo a ar�bicos.
+%
+\pagenumbering{Roman}
+%\usepackage{hyperref}

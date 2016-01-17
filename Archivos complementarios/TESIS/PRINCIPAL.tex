@@ -1,0 +1,76 @@
+\documentclass[a4paper,12pt]{book}
+%paquetes extra y opciones
+\input{Config/pfc_options.tex}
+%
+% Comienzo del documento
+%
+\begin{document}
+\begin{onehalfspace}
+%
+% los valores de ciertas variables como título de la tesis, autor, director...se escriben en rename.tex
+%
+\input{Config/rename.tex}
+%
+% CONTENIDO preliminar: Página de portada, certificado, financiación, agradecimientos, citas, prefacios...
+%
+\input{1portada.tex}
+%
+%
+\input{Config/begin.tex}
+%
+%
+%
+\input{2certificado-extra.tex}
+\input{2certificado.tex}
+\input{3financiacion.tex}
+\input{4agradecimientos.tex}
+\input{5prefacio.tex} 
+\input{6figurascompuestos.tex}
+\input{7abreviaturas.tex}
+\input{8resumen.tex}
+%
+%Indice (ToC)
+% 
+\input{9toc.tex}
+%
+% CONFIG: Definir el estilo de las cabeceras/pies de página.
+%
+\input{Config/headers.tex}
+%
+% CONFIG: Estilo de los capítulos
+%
+\input{Config/chapters.tex}
+%
+% CONTENIDO: Tras esto puedes incluir todos los capítulos/secciones que desees.
+%
+\input{x1-Introduccion.tex} 
+\input{x2-Objetivos.tex} 
+%capítulos de Resultados Y Discusión
+\input{x3-RYD.tex} 
+\input{x4cap.tex}
+%\input{x5cap.tex}
+%\input{x6cap.tex}
+%conclusiones
+\input{x7-Conclusion.tex} 
+% Capítulo con Articulos publicados (consiste en deshojar un pdf original con el artículo e ir metiendo
+% hoja a hoja como figuras de tal forma que se mantienen cabeceras y pies de pág¡gina de la tesis.
+\input{x8-Publicaciones-A.tex} 
+%
+% CONFIG: Estilo de la bibliograf?a
+%
+\input{Config/bibliography.tex}
+%
+% CONTENIDO: Bibliografia. Ficheros .bib que quieras usar, en este caso se usan uno a modo de ejemplo: tesis.bib 
+\begin{small}
+\begin{singlespace}
+\bibliography{tesis.bib}
+\end{singlespace}
+\end{small}
+% CONFIG: Estilo de los apéndices
+\input{Config/appendices.tex} 
+%Articulos pendientes de publicación (se construye igual que x9-Publicaciones-A.tex)
+\input{x9-Publicaciones-B.tex} 
+%
+%
+\end{onehalfspace}
+\end{document}

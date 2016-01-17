@@ -1,0 +1,54 @@
+% This file includes some internal variable names
+
+% Solve some issues with babel package in book
+\renewcommand{\contentsname}{\textcolor{DarkBlue}{ÍNDICE DE LA TESIS}}
+\renewcommand{\partname}{Parte}
+\renewcommand{\appendixname}{\textcolor{DarkBlue}{APÉNDICES}}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\listtablename}{\textcolor{DarkBlue}{ÍNDICE DE TABLAS}}
+\renewcommand\listfigurename{\textcolor{DarkBlue}{ÍNDICE DE FIGURAS}}
+\renewcommand{\chaptername}{Capítulo}
+\renewcommand{\bibname}{Referencias}
+\renewcommand\citeform[1]{(#1)}			% Changes reference format to [(1),(2),(3)]
+\renewcommand{\nomname}{\textcolor{DarkBlue}{LISTA DE SÍMBOLOS}}
+
+% Fine tuning to style file. Babel package doesn't correctly produce output for these items:
+\addto\captionsspanish{\renewcommand\listtablename{Índice de Tablas}}
+\addto\captionsspanish{\renewcommand\listfigurename{Índice de Figuras}}
+
+% Thesis author name
+\newcommand{\myname}{Juan José Expósito González}
+% Director/s of Thesis
+\newcommand{\myboss}{{Magín Lapuerta Amigo}{Francisco J. Martos Ramos}}
+%Thesis title
+\newcommand{\thesistitle}{Thesis Title}
+% Thesis subtitle
+\newcommand{\thesissubtitle}{Here it goes!} 
+\newcommand{\worktype}{Tesis Doctoral}     
+\newcommand{\logo}{Figuras/Escudo.pdf} 
+\newcommand{\logodos}{Figuras/EscudoUCLM.png}
+
+% More customization on headers and footers (lowercase and no chapter numbers)
+%\renewcommand{\chaptermark}[1]{ \markboth{#1}{} }
+%\renewcommand{\sectionmark}[1]{ \markright{#1}{} }
+
+% Define directories where to find figures
+\graphicspath{{Figuras/}}
+
+\makeatletter
+\renewcommand\@cite[2]{%
+	Ref.~#1\ifthenelse{\boolean{@tempswa}}
+	{, \nolinebreak[3] #2}{}
+}
+
+\definecolor{indigo(dye)}{rgb}{0.0, 0.25, 0.42}
+\renewcommand\@biblabel[1]{\textbf{[#1]}}
+\renewcommand{\@cite}[1]{\textbf{\textcolor{cyan}{\cite{{#1}}}}}
+\renewcommand\citeform[1]{\textcolor{indigo(dye)}{\textbf{[#1]}}}
+\renewcommand\citeleft{[} 
+\renewcommand\citeright{]} 
+\makeatother
+
+\let\cite=\citep
+\let\cite=\citen
+
