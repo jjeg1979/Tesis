@@ -1,16 +1,16 @@
 % This file includes some internal variable names
 
 % Solve some issues with babel package in book
-\renewcommand{\contentsname}{Contenido}
+\renewcommand{\contentsname}{\textcolor{DarkBlue}{ÍNDICE DE LA TESIS}}
 \renewcommand{\partname}{Parte}
-\renewcommand{\appendixname}{Apéndice}
+\renewcommand{\appendixname}{\textcolor{DarkBlue}{APÉNDICES}}
 \renewcommand{\figurename}{Figura}
-\renewcommand{\listtablename}{Índice de Tablas}
-\renewcommand\listfigurename{Índice de Figuras}
+\renewcommand{\listtablename}{\textcolor{DarkBlue}{ÍNDICE DE TABLAS}}
+\renewcommand\listfigurename{\textcolor{DarkBlue}{ÍNDICE DE FIGURAS}}
 \renewcommand{\chaptername}{Capítulo}
 \renewcommand{\bibname}{Referencias}
 \renewcommand\citeform[1]{(#1)}			% Changes reference format to [(1),(2),(3)]
-\renewcommand{\nomname}{Lista de Símbolos}
+\renewcommand{\nomname}{\textcolor{DarkBlue}{LISTA DE SÍMBOLOS}}
 
 % Fine tuning to style file. Babel package doesn't correctly produce output for these items:
 \addto\captionsspanish{\renewcommand\listtablename{Índice de Tablas}}
@@ -40,12 +40,15 @@
 	Ref.~#1\ifthenelse{\boolean{@tempswa}}
 	{, \nolinebreak[3] #2}{}
 }
-\renewcommand\@biblabel[1]{[#1]}
-\renewcommand{\@cite}[1]{\cite{{#1}}}
-\renewcommand\citeform[1]{\textbf{[#1]}}
+
+\definecolor{indigo(dye)}{rgb}{0.0, 0.25, 0.42}
+\renewcommand\@biblabel[1]{\textbf{[#1]}}
+\renewcommand{\@cite}[1]{\textbf{\textcolor{cyan}{\cite{{#1}}}}}
+\renewcommand\citeform[1]{\textcolor{indigo(dye)}{\textbf{[#1]}}}
 \renewcommand\citeleft{[} 
 \renewcommand\citeright{]} 
 \makeatother
 
+\let\cite=\citep
 \let\cite=\citen
 

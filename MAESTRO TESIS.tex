@@ -13,11 +13,7 @@
 % Begin of document
 \begin{document}
 	\begin{onehalfspace}
-
-	%\frontmatter
-=======
 	\frontmatter
-
 		%
 		% The values of several variables like author, thesis title... are written in rename.tex
 		%
@@ -31,7 +27,7 @@
 		% CONFIG Frontmatter
 		\input{Config/begin.tex}
 		
-%		\input{Cascara/Agradecimientos}
+		\input{Cascara/Agradecimientos}
 		\input{Cascara/Pagina1.tex}
 		\input{Cascara/Pagina2.tex}
 		
@@ -40,11 +36,7 @@
 		\input{Cascara/ListaSimbolos.tex}	
 		\input{Cascara/TOC.tex}
 		
-
-	%\mainmatter
-=======
 	\mainmatter
->>>>>>> ad66fc58d72a08250029346c22a203e2bf8662aa
 		%
 		% CONFIG: Chapters style
 		%
@@ -53,17 +45,17 @@
 		%
 		% CONTENT: All the chapters
 		\input{Chapters/01Introduccion.tex}
-		\input{Chapters/02ProcesosFormacionYMorfologia.tex}
-		\input{Chapters/03InstalacionesExperimentales.tex}
-		\input{Chapters/04MetodoPropuesto.tex}
-		%\input{Chapters/05Sintering.tex}
-		%\input{Chapters/06Aplicacion.tex}
+		\input{Chapters/02ProcesosFormacionyMorfologia.tex}
+		\input{Chapters/03MetodosAnalisisFractal}
+		\input{Chapters/04InstalacionesExperimentales.tex}
+		\input{Chapters/05MetodosPropuestos.tex}
+		\input{Chapters/06Sintering.tex}
+		\input{Chapters/07EvaluacionHipotesis.tex}
+		\input{Chapters/08AplicacionModelo.tex}
+		\input{Chapters/09ConclusionesYTrabajosFuturos.tex}
 		
-<<<<<<< HEAD
-	%\backmatter
-=======
+		
 	\backmatter
->>>>>>> ad66fc58d72a08250029346c22a203e2bf8662aa
 	
 		\appendix
 		%
@@ -71,16 +63,11 @@
 		%
 		\input{Chapters/IApendiceBeerLambert.tex}
 		\input{Chapters/IIApendiceFallingFactorials.tex}
+		\input{Chapters/IIIApendiceDesarrolloEcuacionesPrefactor.tex}
 
 		\newpage{\pagestyle{empty}\cleardoublepage}
 		\pagestyle{empty}
-<<<<<<< HEAD
-		\printindex
-		
-		
-=======
 		\printindex		
->>>>>>> ad66fc58d72a08250029346c22a203e2bf8662aa
 		
 	\end{onehalfspace}
 \end{document}

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-%=====================================PACKAGES=====================================
-=======
 %=============================================================================PACKAGES=========================================================================================
->>>>>>> ad66fc58d72a08250029346c22a203e2bf8662aa
 % Allows to change several parameters from headers and footers
 \usepackage{fancyhdr}
 
@@ -28,19 +24,26 @@
 % table is for including color in tables
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 
-% Package to change color to references (taken from: http://tex.stackexchange.com/questions/197293/change-the-color-of-cite-number-in-bibliography)
-\usepackage{xpatch}
-
 % Allows to rotate PSs and EPSs
 \usepackage{rotating}          
 
 % Euro symbol
-\usepackage{textcomp}          %
+\usepackage{textcomp}          
+
+\usepackage{tocloft}
 
 % Allows to include several TOC in every chapter
-%\usepackage[spanish]{minitoc}           
-\usepackage{titletoc}
+%\usepackage[spanish]{minitoc} 
+%\usepackage{titlesec}          
+\usepackage{titlesec,titletoc}
 
+% For adding a horizontal line in the LOF, LOT, TOC (taken from: http://tex.stackexchange.com/questions/283070/insert-two-horizontal-lines-above-and-below-contents-and-list-of-figures)
+%\titleformat{name=\chapter,numberless}
+%{\bfseries\huge}
+%{}
+%{0ex}
+%{\titlerule\vspace{1.5ex}\filright}
+%[\vspace{1ex}\titlerule]
 % Manipulations for EPSs
 \usepackage{epsf}            
 
@@ -61,6 +64,9 @@
 % makeidx creates an index
 \usepackage{makeidx}
 
+% Package to customize TOC and LOF LOT. This package is not compatible with titletoc
+%\usepackage{tocloft}
+
 % nomencl creates a nomenclature
 % intoc: Puts the nomenclature in the TOC
 % spanish: For Spanish Language
@@ -71,21 +77,26 @@
 % Graphics inclusion, support for \figure (see below)
 \usepackage{graphicx} 
 
+% To set font
+%\usepackage{fontspec,xunicode}
+%\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+%\setmainfont[Scale=.95]{Times}
+%\setmonofont{Lucida Sans Typewriter}
 % subfig package allows for sub-floats (figures, tables) to be separately captioned, referenced and included in a list-of-floats page
 \usepackage{subfig}
 
 % For the bibliography (natbib allows for multiple bibliographies in one document)
-\usepackage[sort&compress,super,comma, square, sectionbib]{natbib}
-\usepackage{chapterbib}
+\usepackage[sort&compress,super,comma,square,sectionbib]{natbib}
+\usepackage[sectionbib]{chapterbib}
+
+% Package to change color to references (taken from: http://tex.stackexchange.com/questions/197293/change-the-color-of-cite-number-in-bibliography)
+\usepackage{xpatch}
 
 % Integrating notes into the bibliography
 \usepackage{notes2bib}
 
 % Enhanced multiple citations
 \usepackage{mciteplus}
-
-% cite package allows as to manipulate how cites are formed. This package is not compatible with biblatex
-\usepackage{cite}
 
 % Use aditional symbols (AMS)
 \usepackage{amsmath,amssymb,amsfonts,latexsym}
@@ -108,12 +119,9 @@
 % Add bibliography/index/contents to Table of Contents
 \usepackage[nottoc]{tocbibind}
 
-<<<<<<< HEAD
-=======
 % Package for backreferencing
 \usepackage[ref]{backref}
 
->>>>>>> ad66fc58d72a08250029346c22a203e2bf8662aa
 % hyperref is used for hyperlinks
 % colorlinks: To show links with color
 % linkcolor = color: Color of links
@@ -121,20 +129,10 @@
 % citecolor = color: Color of bibliographic references
 % linktoc = all: For numbers in TOC colored as well
 % backref = For backreferencing the citations in the global bibliography
-<<<<<<< HEAD
-\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue,citecolor=blue,linktoc=all,backref=section]{hyperref}
-=======
-\usepackage[linktoc=all,backref=section]{hyperref}
-% Change hyperref behaviour
-\hypersetup{
-	colorlinks=true,
-	citecolor=violet,
-	linkcolor=red,
-	urlcolor=blue,
-	citebordercolor=violet,
-	filebordercolor=red,
-	linkbordercolor=blue}
->>>>>>> ad66fc58d72a08250029346c22a203e2bf8662aa
+\usepackage[colorlinks=true,linktoc=all,backref=section,bookmarks=true]{hyperref}
+
+% cite package allows as to manipulate how cites are formed. This package is not compatible with biblatex
+\usepackage{cite}
 
 % lastpage package allows for the use of the lastpage
 \usepackage{lastpage}
@@ -144,7 +142,7 @@
 
 % backref package allows for backreferencing citations in the bibliography when used in per chapter bibliography
 % ref: section number for reference. This package is not compatible with biblatex
-%\usepackage[ref]{backref}
+\usepackage[ref]{backref}
 
 % Multirow package allows for the creation of tables
 \usepackage{multirow}
@@ -152,23 +150,28 @@
 % enumitem package allows the changing of enumeration style (roman numbers...)
 \usepackage{enumitem}
 
-% Define the name of Tables
-\usepackage[format=plain,justification=centerlast,width=15cm,labelsep=period,tablename=Tabla,skip=5pt]{caption}
-
-<<<<<<< HEAD
-%==================================================================================
-=======
 % Multiple columns (for index)
 \usepackage{multicol}
 
+% To display figures, tables and equations per section
+\usepackage{chngcntr} 
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+\counterwithin{equation}{section}
+
+% Reference: https://www.physicsforums.com/threads/latex-list-of-figures-organised-by-chapter.290236/
+
+
 %=============================================================================================================================================================================
->>>>>>> ad66fc58d72a08250029346c22a203e2bf8662aa
 
 % Softens the line breaking rules from LaTeX
 \sloppy 
 
 % Changes decimal symbol to a point
 \spanishdecimal{.}		
+
+% To change color of equations
+%\everymath{\color{blue}}
 
 % To use normal spacing after '.'
 \frenchspacing 
@@ -201,7 +204,7 @@
 \addto\captionsspanish{\renewcommand*{\tablename}{Tabla}}
 
 % Formating for letters and numbers for crossreferences taken from a sublist
-\renewcommand{\mcitesubrefform}{$^{\arabic{mcitebibitemcount}\alph{mcitesubitemcount}}$} 
+%\renewcommand{\mcitesubrefform}{$^{\arabic{mcitebibitemcount}\alph{mcitesubitemcount}}$} 
 %\providecommand{\mcitesubrefform}{\arabic{mcitebibitemcount}.\alph{mcitesubitemcount}}
 
 % Remove "General Index" from the minitoc
@@ -237,16 +240,43 @@
 % Rename Nomenclature
 \renewcommand{\nomname}{Lista de Símbolos}
 
+
+
+% Add a rule after TOC for package tocloft
+\renewcommand\cftaftertoctitle{\par\par\noindent\color{DarkBlue}{\hrulefill}\par\vskip 10pt}
+\renewcommand\cftafterloftitle{\par\par\noindent\color{DarkBlue}{\hrulefill}\par\vskip 10pt}
+\renewcommand\cftafterlottitle{\par\par\noindent\color{DarkBlue}{\hrulefill}\par\vskip 10pt}
+\setlength\cftparskip{-2pt}
+\setlength\cftbeforechapskip{0pt}
+
+\titleformat{\chapter}
+{\color{DarkBlue}\normalfont\Huge\bfseries}
+{\color{DarkBlue}\thechapter}{1em}{}
+\titleformat{\section}
+{\color{DarkBlue}\normalfont\Large\bfseries}
+{\color{DarkBlue}\thesection}{1em}{}
+\titleformat{\subsection}
+{\color{DarkBlue}\normalfont\Large\bfseries}
+{\color{DarkBlue}\thesubsection}{1em}{}
+%\titleformat{\subsubsection}
+%{\color{DarkBlue}\normalfont\Large\bfseries}
+%{\color{DarkBlue}\thesubsubsectioin}{1em}{}
+\titleformat{\paragraph}
+{\color{DarkBlue}\normalfont\Large\bfseries}
+{\color{DarkBlue}\theparagraph}{1em}{}
+
 % To change color to cite references in the References Section (not in the main text taken from: http://tex.stackexchange.com/questions/197293/change-the-color-of-cite-number-in-bibliography)
 \makeatletter
 \xpatchcmd{\@lbibitem}
 {\item[\hfil}
-{\item[\hfil\color{blue}}
+{\item[\hfil\color{violet}}
 {}{}
 \makeatother
 
 % Rename Command in backref so the sections are in brackets
-\renewcommand*{\backref}[1]{[#1]}
+\definecolor{cobalt}{rgb}{0.0, 0.28, 0.67}
+\definecolor{cornellred}{rgb}{0.7, 0.11, 0.11}
+\renewcommand*{\backref}[1]{\textbf{\textcolor{cornellred}{[#1]}}}
 % Define Spanish words for backreferencing
 \def\backrefspanish{%
 	\def\backrefpagesname{páginas}%
@@ -282,32 +312,15 @@
     \thispagestyle{empty}
     \newpage
     \if@twocolumn\hbox{}\newpage\fi\fi\fi}
-<<<<<<< HEAD
-\makeatother
-=======
 \makeatother
 
+% Code to add an extra level (paragraph, taken from: )
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 % This code lets the index to be printed in different number of columns (taken from: http://latex-community.org/forum/viewtopic.php?f=4&t=1735)
-%\makeatletter
-%\renewenvironment{theindex}
-%{\if@twocolumn
-%	\@restonecolfalse
-%	\else
-%	\@restonecoltrue
-%	\fi
-%	\setlength{\columnseprule}{0.5pt}
-%	\setlength{\columnsep}{35pt}
-%	\begin{multicols}{2}[\section*{\indexname}]
-%		\markboth{\MakeUppercase\indexname}%
-%		{\MakeUppercase\indexname}%
-%		\thispagestyle{plain}
-%		\setlength{\parindent}{0pt}
-%		\setlength{\parskip}{0pt plus 0.3pt}
-%		\relax
-%		\let\item\@idxitem}%
-%	{\end{multicols}\if@restonecol\onecolumn\else\clearpage\fi}
-%\makeatother
 \makeatletter
 \renewenvironment{theindex}
 {\if@twocolumn
@@ -334,4 +347,21 @@
 %\renewcommand\subitem{\scriptsize\@idxitem %\normalfont\hspace*{20\p@}}                  %Makes subitems small, normal
 %\renewcommand\subsubitem{\scriptsize\@idxitem %\normalfont\hspace*{30\p@}}               %Makes subsubitems small, normal
 %\makeatother
->>>>>>> ad66fc58d72a08250029346c22a203e2bf8662aa
+
+% Redefinition of the textcolor (taken from: http://tex.stackexchange.com/questions/21598/how-to-color-math-symbols)
+%\makeatletter
+%\renewcommand*{\@textcolor}[3]{%
+%	\protect\leavevmode
+%	\begingroup
+%	\color#1{#2}#3%
+%	\endgroup
+%}
+%\makeatother
+
+% Tries to change colors of links (taken from: http://tex.stackexchange.com/questions/246386/changing-color-of-cites-with-hypersetup-not-working)
+\AtBeginDocument{%
+	\hypersetup{
+		filecolor=cyan,
+		linkcolor=DarkBlue,
+		urlcolor=DarkBlue}
+}
