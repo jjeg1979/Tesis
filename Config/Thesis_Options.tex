@@ -249,6 +249,7 @@
 \setlength\cftparskip{-2pt}
 \setlength\cftbeforechapskip{0pt}
 
+<<<<<<< HEAD
 \titleformat{\chapter}
 {\color{DarkBlue}\normalfont\Huge\bfseries}
 {\color{DarkBlue}\thechapter}{1em}{}
@@ -264,6 +265,24 @@
 \titleformat{\paragraph}
 {\color{DarkBlue}\normalfont\Large\bfseries}
 {\color{DarkBlue}\theparagraph}{1em}{}
+=======
+% Customization of TOC/LOF/LOT with titletoc (taken from: http://tex.stackexchange.com/questions/60924/how-can-i-customize-the-list-of-tables-with-the-titletoc-package) and from: http://tex.stackexchange.com/questions/261364/modifying-list-of-tables-images
+
+%\titleformat{chapter}[display]%             
+%{\relax}
+%{\raggedleft{\color{halfgray}\chapterNumber\thechapter} \\ }
+%{0pt}%
+%{\titlerule\vspace*{.9\baselineskip}\raggedright\spacedallcaps}[\normalsize\vspace*{.8\baselineskip}\titlerule]%
+
+\titlecontents{chapter}[0pt]
+{\vspace{.4\baselineskip}\bfseries}
+{\textcolor{DarkBlue}{\thecontentslabel\hspace{1.8mm}}}
+{}
+%{\titlerule\vspace*{.9\baselineskip}\raggedright\spacedallcaps}[\normalsize\vspace*{.8\baselineskip}\titlerule]
+{\hspace{.5em}\titlerule*[10pt]{$\cdot$}\contentspage}
+%{\titlerule\vspace*{.9\baselineskip}\raggedright[\normalsize\vspace*{.8\baselineskip}\titlerule]{$\cdot$}\contentspage}
+
+>>>>>>> 693e9268ae27c63b8df483515d98b793d51de772
 
 % To change color to cite references in the References Section (not in the main text taken from: http://tex.stackexchange.com/questions/197293/change-the-color-of-cite-number-in-bibliography)
 \makeatletter

@@ -1,13 +1,15 @@
 \select@language {spanish}
-\contentsline {chapter}{\IeC {\'I}ndice de Figuras}{\es@scroman {vii}}{chapter*.5}
-\contentsline {chapter}{\IeC {\'I}ndice de Tablas}{\es@scroman {ix}}{chapter*.6}
+\contentsline {chapter}{\leavevmode {\color {DarkBlue}\IeC {\'I}NDICE DE FIGURAS}}{\es@scroman {ix}}{section*.4}
+\contentsline {chapter}{\leavevmode {\color {DarkBlue}\IeC {\'I}NDICE DE TABLAS}}{\es@scroman {xi}}{section*.5}
 \contentsline {chapter}{\numberline {1}INTRODUCCI\IeC {\'O}N}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Motivaci\IeC {\'o}n}{2}{section.1.1}
-\contentsline {section}{\numberline {1.2}Antecedentes}{3}{section.1.2}
-\contentsline {section}{\numberline {1.3}Objetivos}{4}{section.1.3}
+\contentsline {section}{\numberline {1.2}Objetivos}{3}{section.1.2}
+\contentsline {section}{\numberline {1.3}Antecedentes}{4}{section.1.3}
 \contentsline {section}{\numberline {1.4}Metodolog\IeC {\'\i }a}{5}{section.1.4}
-\contentsline {section}{\numberline {1.5}Desarrollo del Documento}{6}{section.1.5}
-\contentsline {section}{\numberline {1.6}Bibliometr\IeC {\'\i }a}{7}{section.1.6}
+\contentsline {section}{\numberline {1.5}Bibliometr\IeC {\'\i }a}{6}{section.1.5}
+\contentsline {section}{\numberline {1.6}Viabilidad}{6}{section.1.6}
+\contentsline {section}{\numberline {1.7}Desarrollo del Documento de la Tesis}{6}{section.1.7}
+\contentsline {section}{\numberline {1.8}Resumen del Cap\IeC {\'\i }tulo}{7}{section.1.8}
 \contentsline {chapter}{\numberline {2}PROCESOS DE FORMACI\IeC {\'O}N \\ Y MORFOLOG\IeC {\'I}A DE LAS PART\IeC {\'I}CULAS DI\IeC {\'E}SEL}{9}{chapter.2}
 \contentsline {section}{\numberline {2.1}Introducci\IeC {\'o}n}{10}{section.2.1}
 \contentsline {section}{\numberline {2.2}Procesos de formaci\IeC {\'o}n de las part\IeC {\'\i }culas}{11}{section.2.2}
@@ -17,29 +19,78 @@
 \contentsline {subsubsection}{\numberline {2.2.1.3}Crecimiento superficial de las part\IeC {\'\i }culas}{15}{subsubsection.2.2.1.3}
 \contentsline {subsubsection}{\numberline {2.2.1.4}Oxidaci\IeC {\'o}n}{15}{subsubsection.2.2.1.4}
 \contentsline {subsubsection}{\numberline {2.2.1.5}Aglomeraci\IeC {\'o}n y agregaci\IeC {\'o}n}{16}{subsubsection.2.2.1.5}
-\contentsline {subsection}{\numberline {2.2.2}Formaci\IeC {\'o}n de part\IeC {\'\i }culas y composici\IeC {\'o}n}{17}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Colisiones entre part\IeC {\'\i }culas}{20}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Tipos de uni\IeC {\'o}n}{21}{subsection.2.2.4}
-\contentsline {subsection}{\numberline {2.2.5}Tipos de aglomeraci\IeC {\'o}n}{23}{subsection.2.2.5}
-\contentsline {subsubsection}{\numberline {2.2.5.1}Introducci\IeC {\'o}n}{23}{subsubsection.2.2.5.1}
-\contentsline {subsubsection}{\numberline {2.2.5.2}Aglomeraci\IeC {\'o}n limitada por difusi\IeC {\'o}n}{23}{subsubsection.2.2.5.2}
-\contentsline {subsubsection}{\numberline {2.2.5.3}Aglomeraci\IeC {\'o}n bal\IeC {\'\i }stica}{24}{subsubsection.2.2.5.3}
-\contentsline {subsubsection}{\numberline {2.2.5.4}Aglomeraci\IeC {\'o}n limitada por reacci\IeC {\'o}n}{24}{subsubsection.2.2.5.4}
-\contentsline {subsection}{\numberline {2.2.6}Reestructuracion t\IeC {\'e}rmica del aglomerado}{25}{subsection.2.2.6}
-\contentsline {section}{\numberline {2.3}Efectos mediambientales y fisiol\IeC {\'o}gicos debidos \\ a la morfolog\IeC {\'\i }a de los aglomerados}{26}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Introducci\IeC {\'o}n}{26}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Efectos sobre la salud p\IeC {\'u}blica}{27}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Impacto medioambiental}{29}{subsection.2.3.3}
-\contentsline {chapter}{\numberline {3}INSTALACIONES EXPERIMENTALES}{31}{chapter.3}
-\contentsline {chapter}{\numberline {4}M\IeC {\'E}TODO DE AN\IeC {\'A}LISIS FRACTAL PROPUESTO}{33}{chapter.4}
-\contentsline {section}{\numberline {4.1}Conceptos b\IeC {\'a}sicos}{34}{section.4.1}
-\contentsline {section}{\numberline {4.2}Descripci\IeC {\'o}n del modelo geom\IeC {\'e}trico}{36}{section.4.2}
-\contentsline {section}{\numberline {4.3}Algoritmo del modelo}{36}{section.4.3}
-\contentsline {section}{\numberline {4.4}Hip\IeC {\'o}tesis del modelo}{36}{section.4.4}
-\contentsline {chapter}{\numberline {5}GENERALIZACI\IeC {\'O}N A PART\IeC {\'I}CULAS DEFORMADAS}{37}{chapter.5}
-\contentsline {section}{\numberline {5.1}Modelado del prefactor $k_f$}{38}{section.5.1}
-\contentsline {section}{\numberline {5.2}Coeficiente de solape para part\IeC {\'\i }culas deformadas $z$}{38}{section.5.2}
-\contentsline {chapter}{\numberline {6}APLICACI\IeC {\'O}N DEL MODELO}{39}{chapter.6}
-\contentsline {chapter}{Ap\IeC {\'e}ndice: Beer-Lambert}{41}{appendix*.21}
-\contentsline {chapter}{Teor\IeC {\'\i }a sobre polinomios factoriales}{43}{appendix*.22}
+\contentsline {paragraph}{\numberline {2.2.1.5.1}Aglomeraci\IeC {\'o}n limitada por difusi\IeC {\'o}n}{18}{paragraph.2.2.1.5.1}
+\contentsline {paragraph}{\numberline {2.2.1.5.2}Aglomeraci\IeC {\'o}n bal\IeC {\'\i }stica}{18}{paragraph.2.2.1.5.2}
+\contentsline {paragraph}{\numberline {2.2.1.5.3}Aglomeraci\IeC {\'o}n limitada por reacci\IeC {\'o}n}{18}{paragraph.2.2.1.5.3}
+\contentsline {subsection}{\numberline {2.2.2}Colisiones entre part\IeC {\'\i }culas}{19}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Tipos de uni\IeC {\'o}n}{20}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Reestructuracion t\IeC {\'e}rmica del aglomerado}{22}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}Efectos cuantificables debidos \\ a la morfolog\IeC {\'\i }a de los aglomerados}{23}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Introducci\IeC {\'o}n}{23}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Efectos tecnol\IeC {\'o}gicos}{24}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Efectos sobre la salud p\IeC {\'u}blica}{24}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Impacto medioambiental}{26}{subsection.2.3.4}
+\contentsline {chapter}{\numberline {3}M\IeC {\'E}TODOS DE AN\IeC {\'A}LISIS FRACTAL}{29}{chapter.3}
+\contentsline {section}{\numberline {3.1}Geometr\IeC {\'\i }a fractal}{30}{section.3.1}
+\contentsline {section}{\numberline {3.2}Conceptos b\IeC {\'a}sicos}{30}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Concepto de Dimensi\IeC {\'o}n}{32}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Dimensi\IeC {\'o}n fractal}{32}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Ejemplos de fractales}{32}{section.3.3}
+\contentsline {section}{\numberline {3.4}Hip\IeC {\'o}tesis del modelado fractal}{32}{section.3.4}
+\contentsline {section}{\numberline {3.5}M\IeC {\'e}todos del an\IeC {\'a}lisis fractal}{32}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}M\IeC {\'e}todos de Box--Counting}{32}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}M\IeC {\'e}todos Multifractales}{32}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}M\IeC {\'e}todos de Sistemas Funciones Iteradas (IFS)}{32}{subsection.3.5.3}
+\contentsline {section}{\numberline {3.6}Aplicaciones pr\IeC {\'a}cticas del an\IeC {\'a}lisis fractal}{32}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}An\IeC {\'a}lisis fractal de part\IeC {\'\i }culas di\IeC {\'e}sel}{32}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Ejemplos en las ramas de la Biolog\IeC {\'\i }a y de la Bot\IeC {\'a}nica}{32}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.3}Ejemplos en las ramas de la Geolog\IeC {\'\i }a y de la Geof\IeC {\'\i }sica}{32}{subsection.3.6.3}
+\contentsline {chapter}{\numberline {4}INSTALACIONES EXPERIMENTALES}{33}{chapter.4}
+\contentsline {section}{\numberline {4.1}Instalaciones de la UCLM}{34}{section.4.1}
+\contentsline {section}{\numberline {4.2}Instalaciones de la UMA}{34}{section.4.2}
+\contentsline {section}{\numberline {4.3}Resumen}{34}{section.4.3}
+\contentsline {chapter}{\numberline {5}M\IeC {\'E}TODOS DE AN\IeC {\'A}LISIS FRACTAL PROPUESTOS}{35}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conceptos b\IeC {\'a}sicos}{36}{section.5.1}
+\contentsline {section}{\numberline {5.2}Hip\IeC {\'o}tesis del primer modelo propuesto}{36}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Descripci\IeC {\'o}n del modelo}{36}{subsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.1.1}Evoluci\IeC {\'o}n}{36}{subsubsection.5.2.1.1}
+\contentsline {subsubsection}{\numberline {5.2.1.2}Algoritmo}{36}{subsubsection.5.2.1.2}
+\contentsline {section}{\numberline {5.3}Hip\IeC {\'o}tesis del segundo modelo propuesto}{36}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Descripci\IeC {\'o}n del modelo}{36}{subsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.1.1}Evoluci\IeC {\'o}n}{36}{subsubsection.5.3.1.1}
+\contentsline {subsubsection}{\numberline {5.3.1.2}Algoritmo}{36}{subsubsection.5.3.1.2}
+\contentsline {section}{\numberline {5.4}Resumen}{36}{section.5.4}
+\contentsline {chapter}{\numberline {6}GENERALIZACI\IeC {\'O}N A AGLOMERADOS CON APLASTAMIENTO}{37}{chapter.6}
+\contentsline {section}{\numberline {6.1}Prefactor de la Ley de Potencias $k_f$}{38}{section.6.1}
+\contentsline {section}{\numberline {6.2}Coeficiente de solape $z$}{38}{section.6.2}
+\contentsline {section}{\numberline {6.3}Coeficiente de aplastamiento. Diferencias con el coeficiente de solape}{38}{section.6.3}
+\contentsline {section}{\numberline {6.4}Casos particulares. Casos l\IeC {\'\i }mite te\IeC {\'o}ricos}{38}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Dimensi\IeC {\'o}n fractal 1}{38}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Dimensi\IeC {\'o}n fractal 1.5}{38}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.3}Dimensi\IeC {\'o}n fractal 2}{38}{subsection.6.4.3}
+\contentsline {subsection}{\numberline {6.4.4}Dimensi\IeC {\'o}n fractal 2.5}{38}{subsection.6.4.4}
+\contentsline {subsection}{\numberline {6.4.5}Dimensi\IeC {\'o}n fractal 3}{38}{subsection.6.4.5}
+\contentsline {section}{\numberline {6.5}Resumen}{38}{section.6.5}
+\contentsline {chapter}{\numberline {7}EVALUACI\IeC {\'O}N DE LAS HIP\IeC {\'O}TESIS DEL MODELO}{39}{chapter.7}
+\contentsline {section}{\numberline {7.1}Generaci\IeC {\'o}n de Aglomerados Fractales Tridimensionales}{40}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Introducci\IeC {\'o}n}{40}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Motivaci\IeC {\'o}n}{40}{subsection.7.1.2}
+\contentsline {section}{\numberline {7.2}Planteamiento como problema de optimizaci\IeC {\'o}n}{40}{section.7.2}
+\contentsline {section}{\numberline {7.3}Soluci\IeC {\'o}n al problema}{40}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Metodolog\IeC {\'\i }a}{40}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Condiciones de convergencia}{40}{subsection.7.3.2}
+\contentsline {subsection}{\numberline {7.3.3}Validez y rango de aplicaci\IeC {\'o}n}{40}{subsection.7.3.3}
+\contentsline {section}{\numberline {7.4}Generaci\IeC {\'o}n de im\IeC {\'a}genes bidimensionales}{40}{section.7.4}
+\contentsline {section}{\numberline {7.5}M\IeC {\'e}todo de Box--Counting}{40}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Desarrollo}{40}{subsection.7.5.1}
+\contentsline {subsection}{\numberline {7.5.2}Aplicaci\IeC {\'o}n a las condiciones de contorno del m\IeC {\'e}todo}{40}{subsection.7.5.2}
+\contentsline {subsection}{\numberline {7.5.3}Validaci\IeC {\'o}n con aglomerados generados aleatoriamente}{40}{subsection.7.5.3}
+\contentsline {section}{\numberline {7.6}Estudio de la Monodispersidad}{40}{section.7.6}
+\contentsline {section}{\numberline {7.7}Estudio de la Esfericidad}{40}{section.7.7}
+\contentsline {section}{\numberline {7.8}Resumen}{40}{section.7.8}
+\contentsline {chapter}{\numberline {8}APLICACI\IeC {\'O}N DEL MODELO}{41}{chapter.8}
+\contentsline {chapter}{\numberline {9}CONCLUSIONES Y TRABAJOS FUTUROS}{43}{chapter.9}
+\contentsline {chapter}{Ap\IeC {\'e}ndice: Beer-Lambert}{45}{appendix*.17}
+\contentsline {chapter}{Teor\IeC {\'\i }a sobre polinomios factoriales}{47}{appendix*.18}
+\contentsline {chapter}{Desarrollo de las ecuaciones del prefactor para los casos te\IeC {\'o}ricos}{49}{appendix*.19}
 \contentsfinish 
